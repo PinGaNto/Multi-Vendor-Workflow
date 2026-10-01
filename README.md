@@ -18,8 +18,12 @@ three pillars and outputs a filled Excel workbook plus a leaderboard.
     python run_monthly.py [--reset]                   # every month in data/inbox/ in order (rebuilds memory)
     python generate_mock_data.py                      # sample Jul–Sep drops (replace with real files)
 
-## Workflow Control Center (app.py)
-`streamlit run app.py` → **1 Inputs** → **2 QA & Processing** → **3 Human Review** → **4 Finalize** → **5 Leaderboard / Reports**.
+## Workflow Control Center
+The Control Center sits **at the top of the leaderboard page** (`creator_leaderboard.html`, above the board) and also runs as a Streamlit app. Both follow the same steps.
+
+**On the leaderboard page** (no install, runs in the browser): pick the month → upload the request list and vendor files (.xlsx/.csv) or press **Generate Demo Data** → **Start QA & Processing** → QA results (GREEN / YELLOW / RED creators, vendor scores with 3-month reliability, tiers, warnings) → **Human review** (a Decision per blocked item, Apply; a confirmed match is re-checked) → **Finalize & build leaderboard**, which rebuilds the board, channel boards and creator profiles below from the run. CSV downloads (leaderboard, filled channel data, QA flags + audit) appear after finalizing. **Reset Demo** returns to the published board. In-page runs are not saved: they use the settings, vendor-recognition registry and memory snapshot embedded when the page was built. The engine (`web/engine.js`) is a JavaScript port of the Python pipeline; `python tests/test_parity.py` runs both on the same demo files and memory and checks that flags, vendor scores, tiers, review outcomes and every creator score match.
+
+**Streamlit app** (`streamlit run app.py`) → **1 Inputs** → **2 QA & Processing** → **3 Human Review** → **4 Finalize** → **5 Leaderboard / Reports**.
 - **Inputs:** upload the month's files (any names). Each lands in an input slot (Requested creator list / Vendor A / B / C), recognised by content.
 - **Generate Demo Data** (secondary button beside the uploader) creates a complete **Synthetic Demo Data** set and loads it into the same slots: a request list (100 creators, 60% needing all three channels), Vendor A/B/C files (200–300 records each, each vendor in its own format) and 3 months of synthetic history. From there the steps are exactly the same as with real files. Demo runs use `demo_workspace/` for memory and outputs, so the real `memory/` is never touched. Uploading real files replaces the demo inputs.
 - **Seeded scenarios** (always present; which creators and their values are random each time): 8 clean creators (GREEN); 6 channels where Tier 1 lacks a field → fallback (YELLOW); 4 material discrepancies (RED); 2 Tier 1 outliers overruled by two agreeing vendors (YELLOW); 3 identity mismatches (RED); 2 identity conflicts resolved by majority (YELLOW); 4 historical anomalies (YELLOW); vendor quality A > B > C in 3 months of history and reviewed disputes. The "Seeded QA scenarios" panel lists them for the presenter. Every file has an *About* sheet and a `SYNTHETIC_DEMO_` file name; creators are invented ("Amber Otter (demo)", `@demo_…` handles, `DEMO-` IDs).
@@ -83,7 +87,7 @@ Every decision is logged with the reason and numbers behind it.
 
 ## Outputs
 - `output/<month>/creator_fill_<month>.xlsx`: Summary (incl. which file was recognised as which vendor) · Leaderboard (creators: the three scores, ranks and primary role as live formulas) · Instagram / TikTok / YouTube (one leaderboard per platform, ranking each filled channel on its own, even if the creator's other channels are still missing) · Channels (raw metric, percentile, peer group and source per channel) · Creators · Metric Definitions · Vendor QA (this month, past months, blended score) · Vendor History (scores by month + what was learned) · Creator History · Waterfall · Gaps (with reasons) · Decision Log
-- `creator_leaderboard.html`: Pulse / Lens / Hub tabs × All channels / Instagram / TikTok / YouTube boards, with filters by size band, country, primary role and confidence; channel rows whose creator has other channels still missing are marked "other channels pending"
+- `creator_leaderboard.html`: the Workflow Control Center at the top, then Pulse / Lens / Hub tabs × All channels / Instagram / TikTok / YouTube boards, with filters by size band, country, primary role and confidence; channel rows whose creator has other channels still missing are marked "other channels pending"
 - `qa_report_<month>.xlsx` (stage 1 review form; final version after review), `qa_flags.csv` (machine-readable flags)
 - CSVs, `run_report.md`, `run_summary.json`
 

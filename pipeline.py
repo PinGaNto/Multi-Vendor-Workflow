@@ -156,6 +156,7 @@ class Pipeline:
         self.run_date = pd.Period(self.month, "M").end_time.normalize()          # freshness measured at month end
         self.out_dir = Path(out_dir or ROOT / "output" / self.month)
         mem = Path(memory_dir or ROOT / self.cfg.get("memory_dir", "memory"))
+        self.memory_dir = mem
         from memory import CreatorHistory, VendorHistory
         from vendor_registry import VendorRegistry
         self.registry = VendorRegistry(mem / "vendor_registry.json", self.cfg)

@@ -284,7 +284,7 @@ def generate(month: str | None = None, seed: int | None = None, workspace: Path 
         for j in range(4):                                   # reviewed disputes that month (synthetic evidence)
             p = rng.choice(req_pairs)
             vals = {v: int(truth.at[p, "follower_count"] * npr.normal(1, .02)) for v in quality}
-            winner = max(quality, key=lambda v: quality[v][1] * rng.random() ** 0.35)
+            x = rng.random(); winner = "vendor_a" if x < 0.6 else "vendor_b" if x < 0.9 else "vendor_c"   # reviewers side with A most often
             audit.append({"month": hm, "reviewed_at": f"{hm}-2{j} 15:0{j}:00", "review_id": f"H{k}{j:03d}",
                           "creator_id": p[0], "platform": p[1], "fields": "follower_count", "code": "CROSS_VENDOR_DISCREPANCY",
                           "original_values": json.dumps(vals), "decision": f"SELECT_{winner.upper()}", "manual_value": None,

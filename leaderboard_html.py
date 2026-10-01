@@ -28,7 +28,7 @@ TEMPLATE = r"""<title>Creator Leaderboard</title>
   --hi:#0a0a0a; --hi-bg:#fb923c; --md:#fdba74; --md-bg:#3a1d0a; --lo:#d4d4d4; --lo-bg:#262626; --gold:#fb923c; --bar:#9a3412; --c-instagram:#fb923c; --c-tiktok:#fafafa; --c-youtube:#8f8f8f; --grid:#262626; --overlay:rgba(0,0,0,.6); color-scheme:dark}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-.boardnote{margin:10px 0 0;padding:8px 12px;border-left:3px solid var(--accent,#f60);background:#fff7f0;font-size:13px}
+.boardnote{margin:0 0 12px;padding:8px 12px;border-left:3px solid var(--accent,#f60);background:var(--accent-soft);font-size:13px}
 body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);margin:0}
 .wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,3vw,32px);padding-block:28px 48px}
 header{margin-bottom:18px}

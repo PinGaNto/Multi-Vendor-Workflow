@@ -838,7 +838,7 @@ const ENG = (() => {
     hm.forEach((m, k) => {
       Object.entries(quality).forEach(([v, [q]], t) => vh.push({month: m, vendor: v, current_score: round(q + 0.012 * gauss()), tier: t + 1}));
       for (let j = 0; j < 4; j++) { const kk = pick(reqPairs), f = truth.get(kk).follower_count, vals = Object.fromEntries(Object.keys(quality).map(v => [v, Math.round(f * (1 + 0.02 * gauss()))]));
-        const win = Object.keys(quality).reduce((a, v) => quality[v][1] * rnd() ** 0.35 > quality[a][1] * rnd() ** 0.35 ? v : a, "vendor_a");
+        const x = rnd(), win = x < 0.6 ? "vendor_a" : x < 0.9 ? "vendor_b" : "vendor_c";      // reviewers side with A most often
         audit.push({month: m, review_id: `H${k}${j}`, creator_id: kk.split("|")[0], platform: kk.split("|")[1], code: "CROSS_VENDOR_DISCREPANCY", original_values: JSON.stringify(vals),
           decision: "SELECT_" + win.toUpperCase(), final_source: win, manual_value: null, reviewer: "Synthetic history"}); }
     });
