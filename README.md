@@ -18,6 +18,9 @@ three pillars and outputs a filled Excel workbook plus a leaderboard.
     python run_monthly.py [--reset]                   # every month in data/inbox/ in order (rebuilds memory)
     python generate_mock_data.py                      # sample Jul–Sep drops (replace with real files)
 
+## Website
+GitHub Pages serves `docs/index.html`: https://pinganto.github.io/Multi-Vendor-Workflow/ (the latest month's leaderboard with the Control Center on top). After a new month is finalized, run `python publish_site.py`, then commit and push `docs/`.
+
 ## Workflow Control Center
 The Control Center sits **at the top of the leaderboard page** (`creator_leaderboard.html`, above the board) and also runs as a Streamlit app. Both follow the same steps.
 

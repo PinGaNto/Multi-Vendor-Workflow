@@ -1390,6 +1390,9 @@ const ENG = (() => {
   const el = id => document.getElementById(id);
   let downloads = null;
   if (window.claude && claude.use) claude.use("downloads").then(d => { downloads = d; drawFinal(); }).catch(() => {});
+  else downloads = {save: async ({filename, data}) => {             // plain website (e.g. GitHub Pages): ordinary browser download
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([data], {type: "text/csv"})); a.download = filename;
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000); }};
 
   const nextMonth = m => { const [y, mo] = m.split("-").map(Number); const d = new Date(Date.UTC(y, mo, 1)); return d.toISOString().slice(0, 7); };
   el("cc-month").value = nextMonth(ORIGINAL.month);
