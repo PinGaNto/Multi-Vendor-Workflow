@@ -90,7 +90,7 @@ Every decision is logged with the reason and numbers behind it.
 
 ## Outputs
 - `output/<month>/creator_fill_<month>.xlsx`: Summary (incl. which file was recognised as which vendor) · Leaderboard (creators: the three scores, ranks and primary role as live formulas) · Instagram / TikTok / YouTube (one leaderboard per platform, ranking each filled channel on its own, even if the creator's other channels are still missing) · Channels (raw metric, percentile, peer group and source per channel) · Creators · Metric Definitions · Vendor QA (this month, past months, blended score) · Vendor History (scores by month + what was learned) · Creator History · Waterfall · Gaps (with reasons) · Decision Log
-- `creator_leaderboard.html`: the Workflow Control Center at the top, then Pulse / Lens / Hub tabs × All channels / Instagram / TikTok / YouTube boards, with filters by size band, country, primary role and confidence; channel rows whose creator has other channels still missing are marked "other channels pending"
+- `creator_leaderboard.html`: the Workflow Control Center at the top, then Pulse / Lens / Hub tabs × All channels / Instagram / TikTok / YouTube boards, with filters by size band, country, primary role and confidence; each board shows the top 10 and bottom 10 with the middle ranks behind an expand button; channel rows whose creator has other channels still missing are marked "other channels pending"
 - `qa_report_<month>.xlsx` (stage 1 review form; final version after review), `qa_flags.csv` (machine-readable flags)
 - CSVs, `run_report.md`, `run_summary.json`
 

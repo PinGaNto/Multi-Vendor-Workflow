@@ -160,6 +160,10 @@ tbody tr[data-id]:focus-visible{outline:2px solid var(--accent);outline-offset:-
 .metric{font:13px var(--mono);white-space:nowrap}
 .band{font:12px var(--mono);color:var(--muted)}
 th.wrap{white-space:normal;max-width:90px}
+tr.gap td{padding:0;background:var(--bg)}
+.expand{font:inherit;font-size:13px;font-weight:600;color:var(--accent-ink);background:none;border:0;border-block:1px dashed var(--line);width:100%;padding:10px;cursor:pointer;text-align:center}
+.expand:hover{background:var(--accent-soft)}
+.expand small{font:12px var(--mono);color:var(--muted);font-weight:400}
 .pending{white-space:nowrap;display:block;font-size:11px;font-weight:600;color:var(--md)}
 </style>
 
@@ -190,7 +194,7 @@ th.wrap{white-space:normal;max-width:90px}
           <thead id="thead"></thead>
           <tbody id="rows"></tbody>
         </table>
-        <div class="more"><span id="count"></span><button class="load" id="more" type="button">Show 50 more</button></div>
+        <div class="more"><span id="count"></span><button class="load" id="more" type="button">Show all</button></div>
       </div>
     </main>
     <aside>
@@ -239,7 +243,7 @@ let active = D.metrics[0].key;
 function drawTabs(){
   $("#tabs").innerHTML = D.metrics.map(m => `<button class="tab" role="tab" type="button" data-k="${m.key}" aria-selected="${m.key===active}">
     <span class="th">${esc(m.theme)}</span><span class="tn">${esc(m.pillar)}</span><span class="tm">${esc(m.label)}</span></button>`).join("");
-  document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => { active = b.dataset.k; shown = 50; drawTabs(); render(); }));
+  document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => { active = b.dataset.k; expanded = false; drawTabs(); render(); }));
   const m = D.metrics.find(x => x.key === active);
   $("#pillar-card").innerHTML = `<h2>${esc(m.pillar)} · ${esc(m.theme)}</h2><p>${esc(m.blurb)}.</p>
     <div class="formula">${esc(m.label)} =\n${esc(m.formula)}${m.overrides.map(o => `\n${esc(o[0])}: ${esc(o[1])}`).join("")}</div>
@@ -270,9 +274,15 @@ function drawViews(){
   const items = [["all", "All creators", `${fmt(D.rows.length)} of ${fmt(D.summary.creators)} ranked`],
     ...D.platforms.filter(p => D.channels[p]).map(p => [p, PNAME[p], `${fmt(D.channels[p].length)} of ${fmt(req[p] || 0)} ranked`])];
   $("#views").innerHTML = items.map(([k, label, n]) => `<button class="view" role="tab" type="button" data-v="${k}" aria-selected="${k===view}">${esc(label)} <small>${esc(n)}</small></button>`).join("");
-  document.querySelectorAll(".view").forEach(b => b.addEventListener("click", () => { view = b.dataset.v; shown = 50; drawViews(); render(); }));
+  document.querySelectorAll(".view").forEach(b => b.addEventListener("click", () => { view = b.dataset.v; expanded = false; drawViews(); render(); }));
 }
-let shown = 50;
+let expanded = false;
+const EDGE = 10;                                   // top 10 and bottom 10; the middle is behind "Show ranks …"
+function visible(rows){
+  if (expanded || rows.length <= EDGE * 2) return rows;
+  return [...rows.slice(0, EDGE), {_gap: rows.length - EDGE * 2, from: rows[EDGE]._rank, to: rows[rows.length - EDGE - 1]._rank}, ...rows.slice(-EDGE)];
+}
+const gapRow = g => `<tr class="gap"><td colspan="8"><button class="expand" type="button" data-expand="1">Show ranks ${g.from}–${g.to} <small>(${fmt(g._gap)} more)</small></button></td></tr>`;
 function confDef(plat){
   const order = D.tiers.filter(t => t.tier).map(t => `Tier ${t.tier} = ${t.vendor}`).join(", ");
   const what = plat ? "this channel's follower count and three metrics" : "the follower counts and metrics across all of the creator's requested channels";
@@ -302,7 +312,7 @@ function render(){
     rows = rankBy(D.rows.filter(r => (!band || Object.values(r.ch).some(c => c.band === band))
       && Object.entries(f).every(([k,v]) => !v || r[k] === v) && val(r) != null).sort((a,b) => val(b) - val(a)), val);
     if (q) rows = rows.filter(r => (r.name + " " + r.id + " " + Object.values(r.ch).map(c => c.handle).join(" ")).toLowerCase().includes(q));
-    html = rows.slice(0, shown).map(r => `<tr class="${r._rank<=3?"top":""}" data-id="${esc(r.id)}" tabindex="0" aria-label="Open ${esc(r.name)}'s profile">
+    html = visible(rows).map(r => r._gap ? gapRow(r) : `<tr class="${r._rank<=3?"top":""}" data-id="${esc(r.id)}" tabindex="0" aria-label="Open ${esc(r.name)}'s profile">
       <td class="rank">${r._rank}</td>
       <td><span class="name">${esc(r.name)}</span><span class="id">${esc(r.id)} · ${esc(r.country)} · ${compact(r.followers)}</span></td>
       <td><div class="chans">${Object.entries(r.ch).map(([p,c]) => `<span class="chip${c[active]==null?" na":""}" title="${esc(c.handle)} · ${fmt(c.followers)} followers · ${esc(c.band)} · percentile ${c[active+"__pct"] ?? "n/a"}">${esc(p)} <b>${c[active]==null ? "likes hidden" : show(c[active], m.display)}</b></span>`).join("")}</div></td>
@@ -315,7 +325,7 @@ function render(){
     rows = rankBy(D.channels[view].filter(r => (!band || r.band === band)
       && Object.entries(f).every(([k,v]) => !v || r[k] === v) && val(r) != null).sort((a,b) => val(b) - val(a)), val);
     if (q) rows = rows.filter(r => (r.name + " " + r.id + " " + r.handle).toLowerCase().includes(q));
-    html = rows.slice(0, shown).map(r => `<tr class="${r._rank<=3?"top":""}" data-id="${esc(r.id)}" tabindex="0" aria-label="Open ${esc(r.name || r.id)}'s profile">
+    html = visible(rows).map(r => r._gap ? gapRow(r) : `<tr class="${r._rank<=3?"top":""}" data-id="${esc(r.id)}" tabindex="0" aria-label="Open ${esc(r.name || r.id)}'s profile">
       <td class="rank">${r._rank}</td>
       <td><span class="name">${esc(r.name || r.id)}</span><span class="id">${esc(r.handle)}</span>${r.complete ? "" : `<span class="pending">other channels pending</span>`}</td>
       <td><span class="band">${esc(r.band)} · ${esc(r.country || "")}</span><span class="id">${compact(r.followers)}</span></td>
@@ -326,12 +336,15 @@ function render(){
   }
   const noun = view === "all" ? "creators" : view + " channels";
   $("#rows").innerHTML = rows.length ? html : `<tr><td colspan="8" class="empty">No ${noun} match these filters.</td></tr>`;
-  $("#count").textContent = `Showing ${fmt(Math.min(shown, rows.length))} of ${fmt(rows.length)} ${noun}`;
-  $("#more").disabled = shown >= rows.length;
+  const cut = !expanded && rows.length > EDGE * 2;
+  $("#count").textContent = cut ? `Showing top ${EDGE} and bottom ${EDGE} of ${fmt(rows.length)} ${noun}` : `Showing all ${fmt(rows.length)} ${noun}`;
+  $("#more").hidden = rows.length <= EDGE * 2;
+  $("#more").textContent = cut ? `Show all ${fmt(rows.length)}` : `Collapse to top & bottom ${EDGE}`;
 }
-["#q","#f-band","#f-country","#f-role","#f-conf"].forEach(id => $(id).addEventListener("input", () => { shown = 50; render(); }));
-$("#more").addEventListener("click", () => { shown += 50; render(); });
-function boot(){ view = "all"; shown = 50; drawHeader(); drawSide(); fillFilters(); drawTabs(); drawViews(); render(); }
+["#q","#f-band","#f-country","#f-role","#f-conf"].forEach(id => $(id).addEventListener("input", () => { expanded = false; render(); }));
+$("#more").addEventListener("click", () => { expanded = !expanded; render(); });
+$("#rows").addEventListener("click", e => { if (e.target.closest("[data-expand]")) { e.stopPropagation(); expanded = true; render(); } }, true);
+function boot(){ view = "all"; expanded = false; drawHeader(); drawSide(); fillFilters(); drawTabs(); drawViews(); render(); }
 boot();
 const deftip = $("#deftip");
 function showDef(el){
