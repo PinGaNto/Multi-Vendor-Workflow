@@ -1,0 +1,681 @@
+{
+  "month": "2026-07",
+  "status": "finalized",
+  "request_mix": {
+    "instagram": 637,
+    "tiktok": 643,
+    "youtube": 640
+  },
+  "vendor_qa": {
+    "vendor_a": {
+      "name": "vendor_a",
+      "rows": 1748,
+      "rows_not_needed": 773,
+      "duplicate_rate": 0.0,
+      "coverage": 0.5078,
+      "usable_coverage": 0.4849,
+      "completeness": 0.9642,
+      "freshness": 0.9549,
+      "validity": 0.9982,
+      "format_fixes": 1748,
+      "field_completeness": {
+        "display_name": 0.9802,
+        "country": 0.9754,
+        "contact_email": 0.8744,
+        "category": 0.9462,
+        "handle": 0.9826,
+        "follower_count": 0.9805,
+        "reach_rate": 0.961,
+        "growth_rate": 0.9672,
+        "meaningful_eng_rate": 0.9026
+      },
+      "platform_coverage": {
+        "instagram": 0.3281,
+        "tiktok": 0.2877,
+        "youtube": 0.8391
+      },
+      "implausible_values": 0,
+      "consistency": 0.9812,
+      "score": 0.8502,
+      "tier": 1,
+      "excluded_reason": null,
+      "current_score": 0.8502,
+      "history_score": null,
+      "history_months": 0,
+      "history_trend": [],
+      "qa_avg_3m": null,
+      "review_accuracy": null,
+      "disputes_reviewed": 0
+    },
+    "vendor_b": {
+      "name": "vendor_b",
+      "rows": 2523,
+      "rows_not_needed": 1098,
+      "duplicate_rate": 0.0099,
+      "coverage": 0.7354,
+      "usable_coverage": 0.6276,
+      "completeness": 0.8927,
+      "freshness": 0.8547,
+      "validity": 0.9965,
+      "format_fixes": 12356,
+      "field_completeness": {
+        "display_name": 0.9354,
+        "country": 0.9578,
+        "contact_email": 0.7033,
+        "category": 0.8561,
+        "handle": 0.9691,
+        "follower_count": 0.9509,
+        "reach_rate": 0.9004,
+        "growth_rate": 0.7782,
+        "meaningful_eng_rate": 0.7572
+      },
+      "platform_coverage": {
+        "instagram": 0.7551,
+        "tiktok": 0.7434,
+        "youtube": 0.3844
+      },
+      "implausible_values": 0,
+      "consistency": 0.9793,
+      "score": 0.8474,
+      "tier": 2,
+      "excluded_reason": null,
+      "current_score": 0.8474,
+      "history_score": null,
+      "history_months": 0,
+      "history_trend": [],
+      "qa_avg_3m": null,
+      "review_accuracy": null,
+      "disputes_reviewed": 0
+    },
+    "vendor_c": {
+      "name": "vendor_c",
+      "rows": 1942,
+      "rows_not_needed": 839,
+      "duplicate_rate": 0.0386,
+      "coverage": 0.55,
+      "usable_coverage": 0.2974,
+      "completeness": 0.7301,
+      "freshness": 0.5403,
+      "validity": 0.9898,
+      "format_fixes": 3232,
+      "field_completeness": {
+        "display_name": 0.8547,
+        "country": 0.8654,
+        "contact_email": 0.5341,
+        "category": 0.6661,
+        "handle": 0.8867,
+        "follower_count": 0.8577,
+        "reach_rate": 0.699,
+        "growth_rate": 0.7407,
+        "meaningful_eng_rate": 0.2067
+      },
+      "platform_coverage": {
+        "instagram": 0.292,
+        "tiktok": 0.3033,
+        "youtube": 0.2969
+      },
+      "implausible_values": 34,
+      "consistency": 0.9842,
+      "score": 0.661,
+      "tier": 3,
+      "excluded_reason": null,
+      "current_score": 0.661,
+      "history_score": null,
+      "history_months": 0,
+      "history_trend": [],
+      "qa_avg_3m": null,
+      "review_accuracy": null,
+      "disputes_reviewed": 0
+    }
+  },
+  "tiers": [
+    "vendor_a",
+    "vendor_b",
+    "vendor_c"
+  ],
+  "tier_results": [
+    {
+      "tier": 1,
+      "vendor": "vendor_a",
+      "cells_filled": {
+        "display_name": 682,
+        "country": 679,
+        "contact_email": 627,
+        "category": 666,
+        "handle": 914,
+        "follower_count": 911,
+        "reach_rate": 892,
+        "growth_rate": 898,
+        "meaningful_eng_rate": 840
+      },
+      "before": {
+        "creators_complete_by_n_channels": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "field_fill_rate": {
+          "display_name": 0.0,
+          "country": 0.0,
+          "contact_email": 0.0,
+          "category": 0.0,
+          "handle": 0.0,
+          "follower_count": 0.0,
+          "reach_rate": 0.0,
+          "growth_rate": 0.0,
+          "meaningful_eng_rate": 0.0
+        },
+        "channels_complete": 0.0,
+        "channels_complete_by_platform": {
+          "instagram": 0.0,
+          "tiktok": 0.0,
+          "youtube": 0.0
+        },
+        "creators_complete": 0.0,
+        "open_cells": 12800
+      },
+      "after": {
+        "creators_complete_by_n_channels": {
+          "1": 0.4,
+          "2": 0.1187,
+          "3": 0.0604
+        },
+        "field_fill_rate": {
+          "display_name": 0.8525,
+          "country": 0.8488,
+          "contact_email": 0.7837,
+          "category": 0.8325,
+          "handle": 0.476,
+          "follower_count": 0.4745,
+          "reach_rate": 0.4646,
+          "growth_rate": 0.4677,
+          "meaningful_eng_rate": 0.4474
+        },
+        "channels_complete": 0.4167,
+        "channels_complete_by_platform": {
+          "instagram": 0.2779,
+          "tiktok": 0.2519,
+          "youtube": 0.7203
+        },
+        "creators_complete": 0.14,
+        "open_cells": 5672
+      }
+    },
+    {
+      "tier": 2,
+      "vendor": "vendor_b",
+      "cells_filled": {
+        "display_name": 97,
+        "country": 102,
+        "contact_email": 118,
+        "category": 106,
+        "handle": 686,
+        "follower_count": 673,
+        "reach_rate": 653,
+        "growth_rate": 557,
+        "meaningful_eng_rate": 551
+      },
+      "before": {
+        "creators_complete_by_n_channels": {
+          "1": 0.4,
+          "2": 0.1187,
+          "3": 0.0604
+        },
+        "field_fill_rate": {
+          "display_name": 0.8525,
+          "country": 0.8488,
+          "contact_email": 0.7837,
+          "category": 0.8325,
+          "handle": 0.476,
+          "follower_count": 0.4745,
+          "reach_rate": 0.4646,
+          "growth_rate": 0.4677,
+          "meaningful_eng_rate": 0.4474
+        },
+        "channels_complete": 0.4167,
+        "channels_complete_by_platform": {
+          "instagram": 0.2779,
+          "tiktok": 0.2519,
+          "youtube": 0.7203
+        },
+        "creators_complete": 0.14,
+        "open_cells": 5672
+      },
+      "after": {
+        "creators_complete_by_n_channels": {
+          "1": 0.6687,
+          "2": 0.325,
+          "3": 0.2979
+        },
+        "field_fill_rate": {
+          "display_name": 0.9738,
+          "country": 0.9762,
+          "contact_email": 0.9313,
+          "category": 0.965,
+          "handle": 0.8333,
+          "follower_count": 0.825,
+          "reach_rate": 0.8047,
+          "growth_rate": 0.7578,
+          "meaningful_eng_rate": 0.751
+        },
+        "channels_complete": 0.6573,
+        "channels_complete_by_platform": {
+          "instagram": 0.6138,
+          "tiktok": 0.5692,
+          "youtube": 0.7891
+        },
+        "creators_complete": 0.3775,
+        "open_cells": 2097
+      }
+    },
+    {
+      "tier": 3,
+      "vendor": "vendor_c",
+      "cells_filled": {
+        "display_name": 8,
+        "country": 9,
+        "contact_email": 15,
+        "category": 11,
+        "handle": 81,
+        "follower_count": 83,
+        "reach_rate": 78,
+        "growth_rate": 98,
+        "meaningful_eng_rate": 22
+      },
+      "before": {
+        "creators_complete_by_n_channels": {
+          "1": 0.6687,
+          "2": 0.325,
+          "3": 0.2979
+        },
+        "field_fill_rate": {
+          "display_name": 0.9738,
+          "country": 0.9762,
+          "contact_email": 0.9313,
+          "category": 0.965,
+          "handle": 0.8333,
+          "follower_count": 0.825,
+          "reach_rate": 0.8047,
+          "growth_rate": 0.7578,
+          "meaningful_eng_rate": 0.751
+        },
+        "channels_complete": 0.6573,
+        "channels_complete_by_platform": {
+          "instagram": 0.6138,
+          "tiktok": 0.5692,
+          "youtube": 0.7891
+        },
+        "creators_complete": 0.3775,
+        "open_cells": 2097
+      },
+      "after": {
+        "creators_complete_by_n_channels": {
+          "1": 0.7125,
+          "2": 0.3937,
+          "3": 0.3333
+        },
+        "field_fill_rate": {
+          "display_name": 0.9838,
+          "country": 0.9875,
+          "contact_email": 0.95,
+          "category": 0.9788,
+          "handle": 0.8755,
+          "follower_count": 0.8682,
+          "reach_rate": 0.8453,
+          "growth_rate": 0.8089,
+          "meaningful_eng_rate": 0.7635
+        },
+        "channels_complete": 0.6885,
+        "channels_complete_by_platform": {
+          "instagram": 0.6389,
+          "tiktok": 0.6034,
+          "youtube": 0.8234
+        },
+        "creators_complete": 0.4213,
+        "open_cells": 1690
+      }
+    }
+  ],
+  "final": {
+    "creators_complete_by_n_channels": {
+      "1": 0.7125,
+      "2": 0.3937,
+      "3": 0.3354
+    },
+    "field_fill_rate": {
+      "display_name": 0.9838,
+      "country": 0.9875,
+      "contact_email": 0.95,
+      "category": 0.9788,
+      "handle": 0.8781,
+      "follower_count": 0.8708,
+      "reach_rate": 0.8469,
+      "growth_rate": 0.8104,
+      "meaningful_eng_rate": 0.7651
+    },
+    "channels_complete": 0.6885,
+    "channels_complete_by_platform": {
+      "instagram": 0.6405,
+      "tiktok": 0.6019,
+      "youtube": 0.8234
+    },
+    "creators_complete": 0.4225,
+    "open_cells": 1671
+  },
+  "flags": {
+    "PRIMARY_SOURCE_MISSING": 849,
+    "CROSS_VENDOR_DISCREPANCY": 19,
+    "IDENTITY_MATCH_UNCERTAIN": 6,
+    "IDENTITY_CONFLICT_RESOLVED": 5,
+    "OUTLIER_SOURCE_EXCLUDED": 4
+  },
+  "creators_with_gaps": 462,
+  "agent_log": [
+    {
+      "step": "recognise",
+      "observation": {
+        "file": "vendorA_2026-07.xlsx",
+        "vendor": "vendor_a",
+        "best_guess": "vendor_a",
+        "confidence": 1.0,
+        "runner_up": "vendor_b",
+        "runner_up_score": 0.0,
+        "scores": {
+          "vendor_a": 1.0,
+          "vendor_b": 0.0,
+          "vendor_c": 0.0
+        }
+      },
+      "decision": "vendor_a",
+      "reason": "vendorA_2026-07.xlsx \u2192 vendor_a (matched 100%; next best vendor_b 0%)"
+    },
+    {
+      "step": "recognise",
+      "observation": {
+        "file": "vendorB_jul_export.xlsx",
+        "vendor": "vendor_b",
+        "best_guess": "vendor_b",
+        "confidence": 1.0,
+        "runner_up": "vendor_a",
+        "runner_up_score": 0.0,
+        "scores": {
+          "vendor_a": 0.0,
+          "vendor_b": 1.0,
+          "vendor_c": 0.0
+        }
+      },
+      "decision": "vendor_b",
+      "reason": "vendorB_jul_export.xlsx \u2192 vendor_b (matched 100%; next best vendor_a 0%)"
+    },
+    {
+      "step": "recognise",
+      "observation": {
+        "file": "vendorC_202607.xlsx",
+        "vendor": "vendor_c",
+        "best_guess": "vendor_c",
+        "confidence": 1.0,
+        "runner_up": "vendor_a",
+        "runner_up_score": 0.0,
+        "scores": {
+          "vendor_a": 0.0,
+          "vendor_b": 0.0,
+          "vendor_c": 1.0
+        }
+      },
+      "decision": "vendor_c",
+      "reason": "vendorC_202607.xlsx \u2192 vendor_c (matched 100%; next best vendor_a 0%)"
+    },
+    {
+      "step": "request",
+      "observation": {
+        "creators": 800,
+        "channels": 1920,
+        "by_platform": {
+          "instagram": 637,
+          "tiktok": 643,
+          "youtube": 640
+        },
+        "creators_without_channels": [],
+        "unknown_platforms": []
+      },
+      "decision": "accept",
+      "reason": "800 creators, 1920 channels requested (instagram 637, tiktok 643, youtube 640); 480 need 3 channels, 160 need 2 channels, 160 need 1 channel"
+    },
+    {
+      "step": "history",
+      "observation": {
+        "vendor": "vendor_a"
+      },
+      "decision": "no history",
+      "reason": "vendor_a: first month on record, scored on this month only (0.85)"
+    },
+    {
+      "step": "history",
+      "observation": {
+        "vendor": "vendor_b"
+      },
+      "decision": "no history",
+      "reason": "vendor_b: first month on record, scored on this month only (0.85)"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "vendor": "vendor_b",
+        "imprecise_values": 162
+      },
+      "decision": "flag",
+      "reason": "vendor_b: 162 metric values rejected because rounded counts could move them by more than 5%; a lower tier fills them if it can"
+    },
+    {
+      "step": "history",
+      "observation": {
+        "vendor": "vendor_c"
+      },
+      "decision": "no history",
+      "reason": "vendor_c: first month on record, scored on this month only (0.66)"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "vendor": "vendor_c",
+        "missing_inputs": [
+          "saves_90d"
+        ]
+      },
+      "decision": "note",
+      "reason": "vendor_c doesn't supply saves_90d; metrics that need it can't come from vendor_c (except where a platform override doesn't use it)"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "vendor": "vendor_c",
+        "implausible_values": 34
+      },
+      "decision": "flag",
+      "reason": "vendor_c: 34 metric values outside plausible bounds were rejected"
+    },
+    {
+      "step": "tiering",
+      "observation": {
+        "vendor": "vendor_a",
+        "score": 0.8502,
+        "platform_coverage": {
+          "instagram": 0.3281,
+          "tiktok": 0.2877,
+          "youtube": 0.8391
+        }
+      },
+      "decision": "tier 1",
+      "reason": "score 0.85: fresh coverage 48% of requested channels (strongest on youtube 84%), freshness 95%, metrics computable: The Pulse 96%, The Lens 97%, The Hub 90%"
+    },
+    {
+      "step": "tiering",
+      "observation": {
+        "vendor": "vendor_b",
+        "score": 0.8474,
+        "platform_coverage": {
+          "instagram": 0.7551,
+          "tiktok": 0.7434,
+          "youtube": 0.3844
+        }
+      },
+      "decision": "tier 2",
+      "reason": "score 0.85: fresh coverage 63% of requested channels (strongest on instagram 76%), freshness 85%, metrics computable: The Pulse 90%, The Lens 78%, The Hub 76%"
+    },
+    {
+      "step": "tiering",
+      "observation": {
+        "vendor": "vendor_c",
+        "score": 0.661,
+        "platform_coverage": {
+          "instagram": 0.292,
+          "tiktok": 0.3033,
+          "youtube": 0.2969
+        }
+      },
+      "decision": "tier 3",
+      "reason": "score 0.66: fresh coverage 30% of requested channels (strongest on tiktok 30%), freshness 54%, metrics computable: The Pulse 70%, The Lens 74%, The Hub 21%"
+    },
+    {
+      "step": "gate tier 1",
+      "observation": {
+        "below_target": {
+          "display_name": 0.0,
+          "country": 0.0,
+          "handle": 0.0,
+          "follower_count": 0.0,
+          "reach_rate": 0.0,
+          "growth_rate": 0.0,
+          "meaningful_eng_rate": 0.0
+        },
+        "expected_fillable_cells": {
+          "display_name": 682,
+          "country": 679,
+          "contact_email": 627,
+          "category": 666,
+          "handle": 914,
+          "follower_count": 911,
+          "reach_rate": 892,
+          "growth_rate": 898,
+          "meaningful_eng_rate": 840
+        }
+      },
+      "decision": "use vendor_a",
+      "reason": "first tier"
+    },
+    {
+      "step": "assess after tier 1",
+      "observation": {
+        "creators_complete": 0.14,
+        "channels_complete_by_platform": {
+          "instagram": 0.2779,
+          "tiktok": 0.2519,
+          "youtube": 0.7203
+        }
+      },
+      "decision": "continue",
+      "reason": "14.0% of creators complete, 41.7% of requested channels complete"
+    },
+    {
+      "step": "gate tier 2",
+      "observation": {
+        "below_target": {
+          "display_name": 0.8525,
+          "country": 0.8488,
+          "handle": 0.476,
+          "follower_count": 0.4745,
+          "reach_rate": 0.4646,
+          "growth_rate": 0.4677,
+          "meaningful_eng_rate": 0.4474
+        },
+        "expected_fillable_cells": {
+          "display_name": 97,
+          "country": 102,
+          "contact_email": 118,
+          "category": 106,
+          "handle": 686,
+          "follower_count": 673,
+          "reach_rate": 653,
+          "growth_rate": 557,
+          "meaningful_eng_rate": 551
+        }
+      },
+      "decision": "use vendor_b",
+      "reason": "7 required item(s) below target (display_name, country, handle, follower_count, reach_rate, growth_rate, meaningful_eng_rate); vendor_b can fill 3543 open cells (62.5%)"
+    },
+    {
+      "step": "assess after tier 2",
+      "observation": {
+        "creators_complete": 0.3775,
+        "channels_complete_by_platform": {
+          "instagram": 0.6138,
+          "tiktok": 0.5692,
+          "youtube": 0.7891
+        }
+      },
+      "decision": "continue",
+      "reason": "37.8% of creators complete, 65.7% of requested channels complete"
+    },
+    {
+      "step": "gate tier 3",
+      "observation": {
+        "below_target": {
+          "handle": 0.8333,
+          "follower_count": 0.825,
+          "reach_rate": 0.8047,
+          "growth_rate": 0.7578,
+          "meaningful_eng_rate": 0.751
+        },
+        "expected_fillable_cells": {
+          "display_name": 8,
+          "country": 9,
+          "contact_email": 15,
+          "category": 11,
+          "handle": 81,
+          "follower_count": 83,
+          "reach_rate": 78,
+          "growth_rate": 98,
+          "meaningful_eng_rate": 22
+        }
+      },
+      "decision": "use vendor_c",
+      "reason": "5 required item(s) below target (handle, follower_count, reach_rate, growth_rate, meaningful_eng_rate); vendor_c can fill 405 open cells (19.3%)"
+    },
+    {
+      "step": "assess after tier 3",
+      "observation": {
+        "creators_complete": 0.4213,
+        "channels_complete_by_platform": {
+          "instagram": 0.6389,
+          "tiktok": 0.6034,
+          "youtube": 0.8234
+        }
+      },
+      "decision": "done",
+      "reason": "42.1% of creators complete, 68.8% of requested channels complete"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "flags": {
+          "RED:CROSS_VENDOR_DISCREPANCY": 19,
+          "RED:IDENTITY_MATCH_UNCERTAIN": 6,
+          "YELLOW:IDENTITY_CONFLICT_RESOLVED": 5,
+          "YELLOW:OUTLIER_SOURCE_EXCLUDED": 4,
+          "YELLOW:PRIMARY_SOURCE_MISSING": 849
+        }
+      },
+      "decision": "25 blocked",
+      "reason": "CROSS_VENDOR_DISCREPANCY (RED) 19; IDENTITY_MATCH_UNCERTAIN (RED) 6; IDENTITY_CONFLICT_RESOLVED (YELLOW) 5; OUTLIER_SOURCE_EXCLUDED (YELLOW) 4; PRIMARY_SOURCE_MISSING (YELLOW) 849"
+    },
+    {
+      "step": "review",
+      "observation": {
+        "applied": 25,
+        "problems": []
+      },
+      "decision": "25 decision(s) applied",
+      "reason": "0 blocked item(s) still open"
+    }
+  ]
+}

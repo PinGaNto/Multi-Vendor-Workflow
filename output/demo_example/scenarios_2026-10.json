@@ -1,0 +1,317 @@
+{
+  "label": "SYNTHETIC DEMO DATA",
+  "month": "2026-10",
+  "seed": 2026,
+  "generated": "2026-10-01 01:18",
+  "scenarios": {
+    "1_clean_agreement_GREEN": [
+      {
+        "creator_id": "DEMO-9381",
+        "platform": "instagram",
+        "creator": "Kinetic Comet (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-9381",
+        "platform": "tiktok",
+        "creator": "Kinetic Comet (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-9381",
+        "platform": "youtube",
+        "creator": "Kinetic Comet (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-2114",
+        "platform": "instagram",
+        "creator": "Silver Meadow (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-2114",
+        "platform": "tiktok",
+        "creator": "Silver Meadow (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-2114",
+        "platform": "youtube",
+        "creator": "Silver Meadow (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-3000",
+        "platform": "instagram",
+        "creator": "Hollow Pebble (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-3000",
+        "platform": "tiktok",
+        "creator": "Hollow Pebble (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-3000",
+        "platform": "youtube",
+        "creator": "Hollow Pebble (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-6971",
+        "platform": "instagram",
+        "creator": "Urban Lantern (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-6971",
+        "platform": "tiktok",
+        "creator": "Urban Lantern (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-6971",
+        "platform": "youtube",
+        "creator": "Urban Lantern (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-1980",
+        "platform": "instagram",
+        "creator": "Zesty Orchid (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-1980",
+        "platform": "tiktok",
+        "creator": "Zesty Orchid (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-1980",
+        "platform": "youtube",
+        "creator": "Zesty Orchid (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-8441",
+        "platform": "instagram",
+        "creator": "Copper Maple (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-8441",
+        "platform": "tiktok",
+        "creator": "Copper Maple (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-8441",
+        "platform": "youtube",
+        "creator": "Copper Maple (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-9119",
+        "platform": "instagram",
+        "creator": "Golden Willow (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-9119",
+        "platform": "tiktok",
+        "creator": "Golden Willow (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-9119",
+        "platform": "youtube",
+        "creator": "Golden Willow (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-5235",
+        "platform": "instagram",
+        "creator": "Tidal Kestrel (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-5235",
+        "platform": "tiktok",
+        "creator": "Tidal Kestrel (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      },
+      {
+        "creator_id": "DEMO-5235",
+        "platform": "youtube",
+        "creator": "Tidal Kestrel (demo)",
+        "what": "A, B and C all report this channel within ~2% of each other"
+      }
+    ],
+    "2_primary_source_missing_YELLOW": [
+      {
+        "creator_id": "DEMO-6509",
+        "platform": "tiktok",
+        "creator": "Ivory Comet (demo)",
+        "what": "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"
+      },
+      {
+        "creator_id": "DEMO-9241",
+        "platform": "tiktok",
+        "creator": "Neon Nectar (demo)",
+        "what": "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"
+      },
+      {
+        "creator_id": "DEMO-6892",
+        "platform": "instagram",
+        "creator": "Nimble Quartz (demo)",
+        "what": "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"
+      },
+      {
+        "creator_id": "DEMO-8386",
+        "platform": "instagram",
+        "creator": "Misty Ember (demo)",
+        "what": "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"
+      },
+      {
+        "creator_id": "DEMO-0152",
+        "platform": "youtube",
+        "creator": "Hollow Iris (demo)",
+        "what": "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"
+      },
+      {
+        "creator_id": "DEMO-8234",
+        "platform": "tiktok",
+        "creator": "Neon Willow (demo)",
+        "what": "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"
+      }
+    ],
+    "3_cross_vendor_discrepancy_RED": [
+      {
+        "creator_id": "DEMO-8943",
+        "platform": "tiktok",
+        "creator": "Neon Lotus (demo)",
+        "what": "A 74,778.0 vs B 129,090.0 followers; no third source"
+      },
+      {
+        "creator_id": "DEMO-9834",
+        "platform": "instagram",
+        "creator": "Lunar Sparrow (demo)",
+        "what": "A 54,825.0 vs B 104,046.0 followers; no third source"
+      },
+      {
+        "creator_id": "DEMO-1607",
+        "platform": "youtube",
+        "creator": "Jade Pebble (demo)",
+        "what": "A 132,371.0 vs B 61,863.0 followers; no third source"
+      },
+      {
+        "creator_id": "DEMO-7227",
+        "platform": "instagram",
+        "creator": "Nimble Iris (demo)",
+        "what": "A 7,584.0 vs B 4,637.0 followers; no third source"
+      }
+    ],
+    "3b_tier1_outlier_overruled_YELLOW": [
+      {
+        "creator_id": "DEMO-8021",
+        "platform": "instagram",
+        "creator": "Kinetic Maple (demo)",
+        "what": "Vendor A (Tier 1) is the outlier; B and C agree, so their value is used"
+      },
+      {
+        "creator_id": "DEMO-6524",
+        "platform": "instagram",
+        "creator": "Jade Ember (demo)",
+        "what": "Vendor A (Tier 1) is the outlier; B and C agree, so their value is used"
+      }
+    ],
+    "4_identity_match_uncertain_RED": [
+      {
+        "creator_id": "DEMO-7495",
+        "platform": "instagram",
+        "creator": "Lucky Nectar (demo)",
+        "what": "A says @demo_luckynectar_instagram, C says @demo_tidalharbor_instagram; no majority"
+      },
+      {
+        "creator_id": "DEMO-4262",
+        "platform": "instagram",
+        "creator": "Quiet Comet (demo)",
+        "what": "A says @demo_quietcomet_instagram, C says @demo_tidaldelta_instagram; no majority"
+      },
+      {
+        "creator_id": "DEMO-9134",
+        "platform": "youtube",
+        "creator": "Lucky Raven (demo)",
+        "what": "A says @demo_luckyraven_youtube, C says @demo_vividwillow_youtube; no majority"
+      }
+    ],
+    "4b_identity_resolved_by_majority_YELLOW": [
+      {
+        "creator_id": "DEMO-5578",
+        "platform": "instagram",
+        "creator": "Urban Quartz (demo)",
+        "what": "A and B agree on @demo_urbanquartz_instagram; C reports @demo_tidalmeadow_instagram"
+      },
+      {
+        "creator_id": "DEMO-4238",
+        "platform": "instagram",
+        "creator": "Quiet Glacier (demo)",
+        "what": "A and B agree on @demo_quietglacier_instagram; C reports @demo_cosmickestrel_instagram"
+      }
+    ],
+    "5_historical_anomaly_YELLOW": [
+      {
+        "creator_id": "DEMO-8377",
+        "platform": "tiktok",
+        "creator": "Mellow Willow (demo)",
+        "what": "follower count ~5\u20138x last month's (seeded history); vendors agree, so it's kept"
+      },
+      {
+        "creator_id": "DEMO-5957",
+        "platform": "youtube",
+        "creator": "Rustic Maple (demo)",
+        "what": "follower count ~5\u20138x last month's (seeded history); vendors agree, so it's kept"
+      },
+      {
+        "creator_id": "DEMO-8297",
+        "platform": "instagram",
+        "creator": "Vivid Orchid (demo)",
+        "what": "follower count ~5\u20138x last month's (seeded history); vendors agree, so it's kept"
+      },
+      {
+        "creator_id": "DEMO-9085",
+        "platform": "tiktok",
+        "creator": "Lucky Falcon (demo)",
+        "what": "follower count ~5\u20138x last month's (seeded history); vendors agree, so it's kept"
+      }
+    ]
+  },
+  "history_months": [
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "vendor_quality_history": {
+    "vendor_a": {
+      "qa_score": 0.86,
+      "review_accuracy": 0.9
+    },
+    "vendor_b": {
+      "qa_score": 0.73,
+      "review_accuracy": 0.6
+    },
+    "vendor_c": {
+      "qa_score": 0.57,
+      "review_accuracy": 0.25
+    }
+  },
+  "files": [
+    "SYNTHETIC_DEMO_creator_request_2026-10.xlsx",
+    "SYNTHETIC_DEMO_vendor_A_2026-10.xlsx",
+    "SYNTHETIC_DEMO_vendor_B_2026-10.xlsx",
+    "SYNTHETIC_DEMO_vendor_C_2026-10.xlsx"
+  ]
+}

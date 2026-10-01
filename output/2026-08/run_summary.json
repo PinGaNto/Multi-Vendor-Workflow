@@ -1,0 +1,725 @@
+{
+  "month": "2026-08",
+  "status": "finalized",
+  "request_mix": {
+    "instagram": 628,
+    "tiktok": 636,
+    "youtube": 625
+  },
+  "vendor_qa": {
+    "vendor_c": {
+      "name": "vendor_c",
+      "rows": 1879,
+      "rows_not_needed": 820,
+      "duplicate_rate": 0.0383,
+      "coverage": 0.5405,
+      "usable_coverage": 0.3224,
+      "completeness": 0.7242,
+      "freshness": 0.5958,
+      "validity": 0.9893,
+      "format_fixes": 3175,
+      "field_completeness": {
+        "display_name": 0.8422,
+        "country": 0.8533,
+        "contact_email": 0.553,
+        "category": 0.6616,
+        "handle": 0.9008,
+        "follower_count": 0.8574,
+        "reach_rate": 0.6903,
+        "growth_rate": 0.7186,
+        "meaningful_eng_rate": 0.2068
+      },
+      "platform_coverage": {
+        "instagram": 0.328,
+        "tiktok": 0.2877,
+        "youtube": 0.352
+      },
+      "implausible_values": 23,
+      "consistency": 0.9625,
+      "score": 0.6558,
+      "tier": 3,
+      "excluded_reason": null,
+      "current_score": 0.6736,
+      "history_score": 0.555,
+      "history_months": 1,
+      "history_trend": [
+        [
+          "2026-07",
+          0.661
+        ]
+      ],
+      "qa_avg_3m": 0.661,
+      "review_accuracy": 0.3077,
+      "disputes_reviewed": 13
+    },
+    "vendor_a": {
+      "name": "vendor_a",
+      "rows": 1814,
+      "rows_not_needed": 786,
+      "duplicate_rate": 0.0,
+      "coverage": 0.5442,
+      "usable_coverage": 0.5114,
+      "completeness": 0.9634,
+      "freshness": 0.9397,
+      "validity": 0.999,
+      "format_fixes": 1814,
+      "field_completeness": {
+        "display_name": 0.9789,
+        "country": 0.9763,
+        "contact_email": 0.8938,
+        "category": 0.9456,
+        "handle": 0.9805,
+        "follower_count": 0.9805,
+        "reach_rate": 0.963,
+        "growth_rate": 0.965,
+        "meaningful_eng_rate": 0.8998
+      },
+      "platform_coverage": {
+        "instagram": 0.4092,
+        "tiktok": 0.2783,
+        "youtube": 0.8512
+      },
+      "implausible_values": 0,
+      "consistency": 0.9823,
+      "score": 0.8403,
+      "tier": 2,
+      "excluded_reason": null,
+      "current_score": 0.8538,
+      "history_score": 0.7639,
+      "history_months": 1,
+      "history_trend": [
+        [
+          "2026-07",
+          0.8502
+        ]
+      ],
+      "qa_avg_3m": 0.8502,
+      "review_accuracy": 0.5625,
+      "disputes_reviewed": 16
+    },
+    "vendor_b": {
+      "name": "vendor_b",
+      "rows": 2507,
+      "rows_not_needed": 1105,
+      "duplicate_rate": 0.01,
+      "coverage": 0.7343,
+      "usable_coverage": 0.6437,
+      "completeness": 0.8918,
+      "freshness": 0.8773,
+      "validity": 0.9972,
+      "format_fixes": 12269,
+      "field_completeness": {
+        "display_name": 0.9466,
+        "country": 0.948,
+        "contact_email": 0.6864,
+        "category": 0.8497,
+        "handle": 0.9629,
+        "follower_count": 0.9458,
+        "reach_rate": 0.878,
+        "growth_rate": 0.8003,
+        "meaningful_eng_rate": 0.7611
+      },
+      "platform_coverage": {
+        "instagram": 0.7643,
+        "tiktok": 0.7673,
+        "youtube": 0.3968
+      },
+      "implausible_values": 0,
+      "consistency": 0.9753,
+      "score": 0.8416,
+      "tier": 1,
+      "excluded_reason": null,
+      "current_score": 0.8552,
+      "history_score": 0.7646,
+      "history_months": 1,
+      "history_trend": [
+        [
+          "2026-07",
+          0.8474
+        ]
+      ],
+      "qa_avg_3m": 0.8474,
+      "review_accuracy": 0.5714,
+      "disputes_reviewed": 21
+    }
+  },
+  "tiers": [
+    "vendor_b",
+    "vendor_a",
+    "vendor_c"
+  ],
+  "tier_results": [
+    {
+      "tier": 1,
+      "vendor": "vendor_b",
+      "cells_filled": {
+        "display_name": 718,
+        "country": 721,
+        "contact_email": 593,
+        "category": 683,
+        "handle": 1164,
+        "follower_count": 1139,
+        "reach_rate": 1060,
+        "growth_rate": 972,
+        "meaningful_eng_rate": 924
+      },
+      "before": {
+        "creators_complete_by_n_channels": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        },
+        "field_fill_rate": {
+          "display_name": 0.0,
+          "country": 0.0,
+          "contact_email": 0.0,
+          "category": 0.0,
+          "handle": 0.0,
+          "follower_count": 0.0,
+          "reach_rate": 0.0,
+          "growth_rate": 0.0,
+          "meaningful_eng_rate": 0.0
+        },
+        "channels_complete": 0.0,
+        "channels_complete_by_platform": {
+          "instagram": 0.0,
+          "tiktok": 0.0,
+          "youtube": 0.0
+        },
+        "creators_complete": 0.0,
+        "open_cells": 12645
+      },
+      "after": {
+        "creators_complete_by_n_channels": {
+          "1": 0.2955,
+          "2": 0.1132,
+          "3": 0.0387
+        },
+        "field_fill_rate": {
+          "display_name": 0.8975,
+          "country": 0.9012,
+          "contact_email": 0.7412,
+          "category": 0.8538,
+          "handle": 0.6162,
+          "follower_count": 0.603,
+          "reach_rate": 0.5611,
+          "growth_rate": 0.5146,
+          "meaningful_eng_rate": 0.5156
+        },
+        "channels_complete": 0.3737,
+        "channels_complete_by_platform": {
+          "instagram": 0.4379,
+          "tiktok": 0.4481,
+          "youtube": 0.2336
+        },
+        "creators_complete": 0.11,
+        "open_cells": 4621
+      }
+    },
+    {
+      "tier": 2,
+      "vendor": "vendor_a",
+      "cells_filled": {
+        "display_name": 67,
+        "country": 61,
+        "contact_email": 168,
+        "category": 93,
+        "handle": 445,
+        "follower_count": 451,
+        "reach_rate": 480,
+        "growth_rate": 521,
+        "meaningful_eng_rate": 494
+      },
+      "before": {
+        "creators_complete_by_n_channels": {
+          "1": 0.2955,
+          "2": 0.1132,
+          "3": 0.0387
+        },
+        "field_fill_rate": {
+          "display_name": 0.8975,
+          "country": 0.9012,
+          "contact_email": 0.7412,
+          "category": 0.8538,
+          "handle": 0.6162,
+          "follower_count": 0.603,
+          "reach_rate": 0.5611,
+          "growth_rate": 0.5146,
+          "meaningful_eng_rate": 0.5156
+        },
+        "channels_complete": 0.3737,
+        "channels_complete_by_platform": {
+          "instagram": 0.4379,
+          "tiktok": 0.4481,
+          "youtube": 0.2336
+        },
+        "creators_complete": 0.11,
+        "open_cells": 4621
+      },
+      "after": {
+        "creators_complete_by_n_channels": {
+          "1": 0.6136,
+          "2": 0.4151,
+          "3": 0.329
+        },
+        "field_fill_rate": {
+          "display_name": 0.9812,
+          "country": 0.9775,
+          "contact_email": 0.9513,
+          "category": 0.97,
+          "handle": 0.8518,
+          "follower_count": 0.8417,
+          "reach_rate": 0.8152,
+          "growth_rate": 0.7904,
+          "meaningful_eng_rate": 0.7787
+        },
+        "channels_complete": 0.6803,
+        "channels_complete_by_platform": {
+          "instagram": 0.6529,
+          "tiktok": 0.5849,
+          "youtube": 0.8048
+        },
+        "creators_complete": 0.4088,
+        "open_cells": 1838
+      }
+    },
+    {
+      "tier": 3,
+      "vendor": "vendor_c",
+      "cells_filled": {
+        "display_name": 3,
+        "country": 3,
+        "contact_email": 7,
+        "category": 3,
+        "handle": 68,
+        "follower_count": 66,
+        "reach_rate": 64,
+        "growth_rate": 81,
+        "meaningful_eng_rate": 17
+      },
+      "before": {
+        "creators_complete_by_n_channels": {
+          "1": 0.6136,
+          "2": 0.4151,
+          "3": 0.329
+        },
+        "field_fill_rate": {
+          "display_name": 0.9812,
+          "country": 0.9775,
+          "contact_email": 0.9513,
+          "category": 0.97,
+          "handle": 0.8518,
+          "follower_count": 0.8417,
+          "reach_rate": 0.8152,
+          "growth_rate": 0.7904,
+          "meaningful_eng_rate": 0.7787
+        },
+        "channels_complete": 0.6803,
+        "channels_complete_by_platform": {
+          "instagram": 0.6529,
+          "tiktok": 0.5849,
+          "youtube": 0.8048
+        },
+        "creators_complete": 0.4088,
+        "open_cells": 1838
+      },
+      "after": {
+        "creators_complete_by_n_channels": {
+          "1": 0.6477,
+          "2": 0.4465,
+          "3": 0.3634
+        },
+        "field_fill_rate": {
+          "display_name": 0.985,
+          "country": 0.9812,
+          "contact_email": 0.96,
+          "category": 0.9738,
+          "handle": 0.8878,
+          "follower_count": 0.8767,
+          "reach_rate": 0.8491,
+          "growth_rate": 0.8332,
+          "meaningful_eng_rate": 0.7888
+        },
+        "channels_complete": 0.7046,
+        "channels_complete_by_platform": {
+          "instagram": 0.6768,
+          "tiktok": 0.6053,
+          "youtube": 0.8336
+        },
+        "creators_complete": 0.4425,
+        "open_cells": 1524
+      }
+    }
+  ],
+  "final": {
+    "creators_complete_by_n_channels": {
+      "1": 0.642,
+      "2": 0.4465,
+      "3": 0.3677
+    },
+    "field_fill_rate": {
+      "display_name": 0.985,
+      "country": 0.9812,
+      "contact_email": 0.96,
+      "category": 0.9738,
+      "handle": 0.8909,
+      "follower_count": 0.8793,
+      "reach_rate": 0.8497,
+      "growth_rate": 0.8359,
+      "meaningful_eng_rate": 0.7914
+    },
+    "channels_complete": 0.7051,
+    "channels_complete_by_platform": {
+      "instagram": 0.6783,
+      "tiktok": 0.6053,
+      "youtube": 0.8336
+    },
+    "creators_complete": 0.4437,
+    "open_cells": 1502
+  },
+  "flags": {
+    "PRIMARY_SOURCE_MISSING": 748,
+    "CROSS_VENDOR_DISCREPANCY": 23,
+    "OUTLIER_SOURCE_EXCLUDED": 10,
+    "IDENTITY_MATCH_UNCERTAIN": 8,
+    "IDENTITY_CONFLICT_RESOLVED": 4
+  },
+  "creators_with_gaps": 445,
+  "agent_log": [
+    {
+      "step": "recognise",
+      "observation": {
+        "file": "Book1.xlsx",
+        "vendor": "vendor_c",
+        "best_guess": "vendor_c",
+        "confidence": 0.875,
+        "runner_up": "vendor_a",
+        "runner_up_score": 0.0,
+        "scores": {
+          "vendor_a": 0.0,
+          "vendor_b": 0.0,
+          "vendor_c": 0.875
+        }
+      },
+      "decision": "vendor_c",
+      "reason": "Book1.xlsx \u2192 vendor_c (matched 88%; next best vendor_a 0%)"
+    },
+    {
+      "step": "learn",
+      "observation": {
+        "vendor": "vendor_c",
+        "unused": [
+          "notes"
+        ]
+      },
+      "decision": "note",
+      "reason": "vendor_c sent new column(s) we don't use: notes"
+    },
+    {
+      "step": "recognise",
+      "observation": {
+        "file": "creator_data_0812.xlsx",
+        "vendor": "vendor_a",
+        "best_guess": "vendor_a",
+        "confidence": 0.9,
+        "runner_up": "vendor_b",
+        "runner_up_score": 0.0,
+        "scores": {
+          "vendor_a": 0.9,
+          "vendor_b": 0.0,
+          "vendor_c": 0.0
+        }
+      },
+      "decision": "vendor_a",
+      "reason": "creator_data_0812.xlsx \u2192 vendor_a (matched 90%; next best vendor_b 0%)"
+    },
+    {
+      "step": "recognise",
+      "observation": {
+        "file": "social_export_aug.xlsx",
+        "vendor": "vendor_b",
+        "best_guess": "vendor_b",
+        "confidence": 0.9,
+        "runner_up": "vendor_a",
+        "runner_up_score": 0.0,
+        "scores": {
+          "vendor_a": 0.0,
+          "vendor_b": 0.9,
+          "vendor_c": 0.0
+        }
+      },
+      "decision": "vendor_b",
+      "reason": "social_export_aug.xlsx \u2192 vendor_b (matched 90%; next best vendor_a 0%)"
+    },
+    {
+      "step": "request",
+      "observation": {
+        "creators": 800,
+        "channels": 1889,
+        "by_platform": {
+          "instagram": 628,
+          "tiktok": 636,
+          "youtube": 625
+        },
+        "creators_without_channels": [],
+        "unknown_platforms": []
+      },
+      "decision": "accept",
+      "reason": "800 creators, 1889 channels requested (instagram 628, tiktok 636, youtube 625); 465 need 3 channels, 159 need 2 channels, 176 need 1 channel"
+    },
+    {
+      "step": "history",
+      "observation": {
+        "vendor": "vendor_c",
+        "trend": [
+          [
+            "2026-07",
+            0.661
+          ]
+        ]
+      },
+      "decision": "blend",
+      "reason": "vendor_c: this month 0.67; 1-month reliability 0.56 (QA average 0.66, review accuracy 31% over 13 reviewed dispute(s); up) \u2192 blended 0.66 at 15% reliability weight"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "vendor": "vendor_c",
+        "missing_inputs": [
+          "saves_90d"
+        ]
+      },
+      "decision": "note",
+      "reason": "vendor_c doesn't supply saves_90d; metrics that need it can't come from vendor_c (except where a platform override doesn't use it)"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "vendor": "vendor_c",
+        "implausible_values": 23
+      },
+      "decision": "flag",
+      "reason": "vendor_c: 23 metric values outside plausible bounds were rejected"
+    },
+    {
+      "step": "history",
+      "observation": {
+        "vendor": "vendor_a",
+        "trend": [
+          [
+            "2026-07",
+            0.8502
+          ]
+        ]
+      },
+      "decision": "blend",
+      "reason": "vendor_a: this month 0.85; 1-month reliability 0.76 (QA average 0.85, review accuracy 56% over 16 reviewed dispute(s); up) \u2192 blended 0.84 at 15% reliability weight"
+    },
+    {
+      "step": "history",
+      "observation": {
+        "vendor": "vendor_b",
+        "trend": [
+          [
+            "2026-07",
+            0.8474
+          ]
+        ]
+      },
+      "decision": "blend",
+      "reason": "vendor_b: this month 0.86; 1-month reliability 0.76 (QA average 0.85, review accuracy 57% over 21 reviewed dispute(s); up) \u2192 blended 0.84 at 15% reliability weight"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "vendor": "vendor_b",
+        "imprecise_values": 140
+      },
+      "decision": "flag",
+      "reason": "vendor_b: 140 metric values rejected because rounded counts could move them by more than 5%; a lower tier fills them if it can"
+    },
+    {
+      "step": "tiering",
+      "observation": {
+        "vendor": "vendor_b",
+        "score": 0.8416,
+        "platform_coverage": {
+          "instagram": 0.7643,
+          "tiktok": 0.7673,
+          "youtube": 0.3968
+        }
+      },
+      "decision": "tier 1",
+      "reason": "score 0.84: fresh coverage 64% of requested channels (strongest on tiktok 77%), freshness 88%, metrics computable: The Pulse 88%, The Lens 80%, The Hub 76%"
+    },
+    {
+      "step": "tiering",
+      "observation": {
+        "vendor": "vendor_a",
+        "score": 0.8403,
+        "platform_coverage": {
+          "instagram": 0.4092,
+          "tiktok": 0.2783,
+          "youtube": 0.8512
+        }
+      },
+      "decision": "tier 2",
+      "reason": "score 0.84: fresh coverage 51% of requested channels (strongest on youtube 85%), freshness 94%, metrics computable: The Pulse 96%, The Lens 96%, The Hub 90%"
+    },
+    {
+      "step": "tiering",
+      "observation": {
+        "vendor": "vendor_c",
+        "score": 0.6558,
+        "platform_coverage": {
+          "instagram": 0.328,
+          "tiktok": 0.2877,
+          "youtube": 0.352
+        }
+      },
+      "decision": "tier 3",
+      "reason": "score 0.66: fresh coverage 32% of requested channels (strongest on youtube 35%), freshness 60%, metrics computable: The Pulse 69%, The Lens 72%, The Hub 21%"
+    },
+    {
+      "step": "gate tier 1",
+      "observation": {
+        "below_target": {
+          "display_name": 0.0,
+          "country": 0.0,
+          "handle": 0.0,
+          "follower_count": 0.0,
+          "reach_rate": 0.0,
+          "growth_rate": 0.0,
+          "meaningful_eng_rate": 0.0
+        },
+        "expected_fillable_cells": {
+          "display_name": 718,
+          "country": 721,
+          "contact_email": 593,
+          "category": 683,
+          "handle": 1164,
+          "follower_count": 1139,
+          "reach_rate": 1060,
+          "growth_rate": 972,
+          "meaningful_eng_rate": 924
+        }
+      },
+      "decision": "use vendor_b",
+      "reason": "first tier"
+    },
+    {
+      "step": "assess after tier 1",
+      "observation": {
+        "creators_complete": 0.11,
+        "channels_complete_by_platform": {
+          "instagram": 0.4379,
+          "tiktok": 0.4481,
+          "youtube": 0.2336
+        }
+      },
+      "decision": "continue",
+      "reason": "11.0% of creators complete, 37.4% of requested channels complete"
+    },
+    {
+      "step": "gate tier 2",
+      "observation": {
+        "below_target": {
+          "display_name": 0.8975,
+          "country": 0.9012,
+          "handle": 0.6162,
+          "follower_count": 0.603,
+          "reach_rate": 0.5611,
+          "growth_rate": 0.5146,
+          "meaningful_eng_rate": 0.5156
+        },
+        "expected_fillable_cells": {
+          "display_name": 67,
+          "country": 61,
+          "contact_email": 168,
+          "category": 93,
+          "handle": 445,
+          "follower_count": 451,
+          "reach_rate": 480,
+          "growth_rate": 521,
+          "meaningful_eng_rate": 494
+        }
+      },
+      "decision": "use vendor_a",
+      "reason": "7 required item(s) below target (display_name, country, handle, follower_count, reach_rate, growth_rate, meaningful_eng_rate); vendor_a can fill 2780 open cells (60.2%)"
+    },
+    {
+      "step": "assess after tier 2",
+      "observation": {
+        "creators_complete": 0.4088,
+        "channels_complete_by_platform": {
+          "instagram": 0.6529,
+          "tiktok": 0.5849,
+          "youtube": 0.8048
+        }
+      },
+      "decision": "continue",
+      "reason": "40.9% of creators complete, 68.0% of requested channels complete"
+    },
+    {
+      "step": "gate tier 3",
+      "observation": {
+        "below_target": {
+          "handle": 0.8518,
+          "follower_count": 0.8417,
+          "reach_rate": 0.8152,
+          "growth_rate": 0.7904,
+          "meaningful_eng_rate": 0.7787
+        },
+        "expected_fillable_cells": {
+          "display_name": 3,
+          "country": 3,
+          "contact_email": 7,
+          "category": 3,
+          "handle": 68,
+          "follower_count": 66,
+          "reach_rate": 64,
+          "growth_rate": 81,
+          "meaningful_eng_rate": 17
+        }
+      },
+      "decision": "use vendor_c",
+      "reason": "5 required item(s) below target (handle, follower_count, reach_rate, growth_rate, meaningful_eng_rate); vendor_c can fill 312 open cells (17.0%)"
+    },
+    {
+      "step": "assess after tier 3",
+      "observation": {
+        "creators_complete": 0.4425,
+        "channels_complete_by_platform": {
+          "instagram": 0.6768,
+          "tiktok": 0.6053,
+          "youtube": 0.8336
+        }
+      },
+      "decision": "done",
+      "reason": "44.2% of creators complete, 70.5% of requested channels complete"
+    },
+    {
+      "step": "qa",
+      "observation": {
+        "flags": {
+          "RED:CROSS_VENDOR_DISCREPANCY": 23,
+          "RED:IDENTITY_MATCH_UNCERTAIN": 8,
+          "YELLOW:IDENTITY_CONFLICT_RESOLVED": 4,
+          "YELLOW:OUTLIER_SOURCE_EXCLUDED": 10,
+          "YELLOW:PRIMARY_SOURCE_MISSING": 748
+        }
+      },
+      "decision": "31 blocked",
+      "reason": "CROSS_VENDOR_DISCREPANCY (RED) 23; IDENTITY_MATCH_UNCERTAIN (RED) 8; IDENTITY_CONFLICT_RESOLVED (YELLOW) 4; OUTLIER_SOURCE_EXCLUDED (YELLOW) 10; PRIMARY_SOURCE_MISSING (YELLOW) 748"
+    },
+    {
+      "step": "review",
+      "observation": {
+        "applied": 31,
+        "problems": []
+      },
+      "decision": "31 decision(s) applied",
+      "reason": "0 blocked item(s) still open"
+    }
+  ]
+}

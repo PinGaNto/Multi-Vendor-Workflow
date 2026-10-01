@@ -1,0 +1,215 @@
+{
+  "vendor_a": {
+    "columns": {
+      "creator_id": [
+        "cid"
+      ],
+      "platform": [
+        "platform"
+      ],
+      "handle": [
+        "account"
+      ],
+      "follower_count": [
+        "followers"
+      ],
+      "net_new_followers_90d": [
+        "net_new_90d"
+      ],
+      "views_90d": [
+        "views_90d"
+      ],
+      "likes_90d": [
+        "likes_90d"
+      ],
+      "comments_90d": [
+        "comments_90d"
+      ],
+      "shares_90d": [
+        "shares_90d"
+      ],
+      "saves_90d": [
+        "saves_90d"
+      ],
+      "display_name": [
+        "name"
+      ],
+      "country": [
+        "country_code"
+      ],
+      "contact_email": [
+        "email"
+      ],
+      "category": [
+        "niche"
+      ]
+    },
+    "updated_col": [
+      "updated_at"
+    ],
+    "platform_values": [
+      "Instagram",
+      "TikTok",
+      "YouTube"
+    ],
+    "filename_tokens": [
+      "creator",
+      "drop",
+      "vendora"
+    ],
+    "months_seen": [
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "learned": []
+  },
+  "vendor_b": {
+    "columns": {
+      "creator_id": [
+        "creator_ref"
+      ],
+      "platform": [
+        "channel"
+      ],
+      "handle": [
+        "username"
+      ],
+      "follower_count": [
+        "audience_k"
+      ],
+      "followers_prev": [
+        "audience_90d_ago_k"
+      ],
+      "views_90d": [
+        "plays_90d",
+        "video_plays_90d"
+      ],
+      "likes_90d": [
+        "hearts"
+      ],
+      "comments_90d": [
+        "comment_count",
+        "comments_total"
+      ],
+      "shares_90d": [
+        "share_count"
+      ],
+      "saves_90d": [
+        "bookmarks"
+      ],
+      "display_name": [
+        "full_name"
+      ],
+      "country": [
+        "country_name"
+      ],
+      "contact_email": [
+        "contact"
+      ],
+      "category": [
+        "vertical"
+      ]
+    },
+    "updated_col": [
+      "refreshed"
+    ],
+    "platform_values": [
+      "IG",
+      "TT",
+      "YT"
+    ],
+    "filename_tokens": [
+      "drop",
+      "social",
+      "vendorb"
+    ],
+    "months_seen": [
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "learned": [
+      {
+        "month": "2026-09",
+        "field": "views_90d",
+        "column": "video_plays_90d",
+        "score": 0.85
+      },
+      {
+        "month": "2026-09",
+        "field": "comments_90d",
+        "column": "comments_total",
+        "score": 0.78
+      }
+    ]
+  },
+  "vendor_c": {
+    "columns": {
+      "creator_id": [
+        "id"
+      ],
+      "platform": [
+        "network"
+      ],
+      "handle": [
+        "handle_name"
+      ],
+      "follower_count": [
+        "subs"
+      ],
+      "net_new_followers_90d": [
+        "growth_90d"
+      ],
+      "views_90d": [
+        "views"
+      ],
+      "likes_90d": [
+        "likes"
+      ],
+      "comments_90d": [
+        "comments"
+      ],
+      "shares_90d": [
+        "shares"
+      ],
+      "display_name": [
+        "creator"
+      ],
+      "country": [
+        "geo"
+      ],
+      "contact_email": [
+        "mail"
+      ],
+      "category": [
+        "genre"
+      ]
+    },
+    "updated_col": [
+      "as_of"
+    ],
+    "platform_values": [
+      "INSTAGRAM",
+      "Instagram",
+      "TIKTOK",
+      "Tiktok",
+      "YOUTUBE",
+      "Youtube",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "filename_tokens": [
+      "book",
+      "drop",
+      "vendorc"
+    ],
+    "months_seen": [
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "learned": []
+  }
+}

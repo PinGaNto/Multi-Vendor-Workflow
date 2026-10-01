@@ -1,0 +1,574 @@
+creator_id,level,platform,missing,reason
+CR00213,creator,,display_name,Field empty or invalid in fresh data
+CR00251,creator,,"display_name, country",No vendor has this creator
+CR00318,creator,,country,Field empty or invalid in fresh data
+CR00445,creator,,"display_name, country",Only stale data (vendor_c)
+CR00542,creator,,"display_name, country",Only stale data (vendor_c)
+CR00628,creator,,"display_name, country","Only stale data (vendor_b, vendor_c)"
+CR00657,creator,,"display_name, country",Only stale data (vendor_b)
+CR00770,creator,,"display_name, country","Only stale data (vendor_a, vendor_c)"
+CR00788,creator,,country,Field empty or invalid in fresh data
+CR00871,creator,,country,Field empty or invalid in fresh data
+CR00926,creator,,"display_name, country",Only stale data (vendor_b)
+CR00943,creator,,"display_name, country",Only stale data (vendor_b)
+CR01045,creator,,"display_name, country",Only stale data (vendor_b)
+CR01127,creator,,"display_name, country",Field empty or invalid in fresh data
+CR01230,creator,,"display_name, country",Only stale data (vendor_c)
+CR01257,creator,,country,Field empty or invalid in fresh data
+CR00000,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00003,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00004,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00007,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00009,channel,tiktok,"handle, 90d Growth Rate",handle empty or invalid | The Lens: imprecise (rounded counts) (vendor_b)
+CR00013,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00025,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00025,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)
+CR00029,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c); missing comments_90d (vendor_b)"
+CR00030,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00030,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00031,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00031,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a)
+CR00034,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00039,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00040,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00047,channel,instagram,90d Reach Rate,Excluded at review: CROSS_VENDOR_DISCREPANCY (Q00013)
+CR00047,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00050,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d (vendor_c)"
+CR00050,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR00060,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00061,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00063,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00068,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00068,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00072,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_c); imprecise (rounded counts) (vendor_b)
+CR00072,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00079,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing saves_90d (vendor_b)"
+CR00081,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00082,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00082,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00082,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR00083,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00083,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a)
+CR00084,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00089,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00092,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00102,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00102,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00108,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00108,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00117,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00125,channel,instagram,90d Reach Rate,"The Pulse: missing views_90d (vendor_c, vendor_b)"
+CR00127,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00128,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR00130,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00131,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c); missing likes_90d, shares_90d (vendor_b)"
+CR00136,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00138,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00140,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00141,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00143,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00148,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_b)
+CR00151,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00152,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_b)
+CR00153,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00155,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_a)"
+CR00158,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c, vendor_b)"
+CR00160,channel,instagram,90d Reach Rate,"The Pulse: missing views_90d (vendor_a, vendor_b)"
+CR00160,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00161,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00162,channel,tiktok,"90d Reach Rate, 90d Meaningful Engagement Rate",Excluded at review: CROSS_VENDOR_DISCREPANCY (Q00015)
+CR00165,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00169,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00172,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00173,channel,tiktok,90d Growth Rate,The Lens: missing follower_count (vendor_c); missing net_new_followers_90d (vendor_b)
+CR00174,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00175,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00176,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_a)
+CR00177,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00178,channel,instagram,handle,handle empty or invalid
+CR00181,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00183,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00185,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00190,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00192,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00192,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_c)
+CR00197,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_a, vendor_b)"
+CR00200,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00200,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00200,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00208,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing comments_90d (vendor_b)
+CR00212,channel,tiktok,"90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_b) | The Lens: missing net_new_followers_90d (vendor_b) | The Hub: missing saves_90d (vendor_b)
+CR00213,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00223,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00223,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR00227,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d (vendor_c); missing comments_90d (vendor_b)"
+CR00227,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00228,channel,tiktok,handle,handle empty or invalid
+CR00230,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00231,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00235,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a); missing shares_90d (vendor_b)
+CR00243,channel,instagram,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: missing net_new_followers_90d (vendor_b) | The Hub: missing likes_90d (vendor_b)
+CR00243,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00244,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR00248,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00251,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00259,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00260,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count (vendor_c); missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing saves_90d (vendor_c); missing comments_90d (vendor_b)"
+CR00260,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count, net_new_followers_90d (vendor_c) | The Hub: missing comments_90d, likes_90d (vendor_c)"
+CR00269,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, likes_90d, saves_90d (vendor_c); missing comments_90d (vendor_b)"
+CR00271,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00271,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00277,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00281,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00281,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00283,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count (vendor_c)
+CR00285,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00286,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00287,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_c)
+CR00289,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_a)
+CR00293,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00293,channel,youtube,90d Growth Rate,The Lens: missing follower_count (vendor_a); missing net_new_followers_90d (vendor_b)
+CR00296,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00297,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","handle, follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_c) | The Lens: missing follower_count (vendor_c, vendor_c) | The Hub: missing saves_90d (vendor_c, vendor_c)"
+CR00298,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00302,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00303,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00304,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00304,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00315,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR00315,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, shares_90d (vendor_b)"
+CR00317,channel,instagram,"90d Reach Rate, 90d Meaningful Engagement Rate","The Pulse: missing follower_count, views_90d (vendor_c); missing views_90d (vendor_b) | The Hub: missing saves_90d, shares_90d (vendor_c); missing shares_90d (vendor_b)"
+CR00322,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00323,channel,instagram,handle,handle empty or invalid
+CR00323,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00324,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_a, vendor_c)"
+CR00325,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00330,channel,tiktok,handle,handle empty or invalid
+CR00340,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00340,channel,youtube,90d Meaningful Engagement Rate,"The Hub: missing likes_90d (vendor_c, vendor_a)"
+CR00342,channel,instagram,90d Reach Rate,"The Pulse: missing views_90d (vendor_c, vendor_b)"
+CR00345,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing comments_90d (vendor_b)
+CR00351,channel,youtube,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00354,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00359,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00360,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00364,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a)
+CR00366,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00368,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_a)
+CR00369,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count (vendor_c) | The Hub: missing comments_90d, saves_90d (vendor_c)"
+CR00369,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00369,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00373,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing shares_90d (vendor_b)"
+CR00374,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_a); missing comments_90d (vendor_b)
+CR00374,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR00377,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00377,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00381,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00386,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c); missing comments_90d (vendor_b)"
+CR00394,channel,tiktok,90d Growth Rate,The Lens: missing follower_count (vendor_a); imprecise (rounded counts) (vendor_b)
+CR00396,channel,tiktok,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: imprecise (rounded counts) (vendor_b) | The Hub: missing likes_90d (vendor_b)
+CR00399,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00399,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00400,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00403,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00405,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00407,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00407,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","handle, follower_count empty or invalid | The Pulse: not computable | The Lens: not computable | The Hub: not computable"
+CR00412,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00417,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count (vendor_c); missing follower_count, net_new_followers_90d (vendor_b)"
+CR00417,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00419,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c)"
+CR00422,channel,instagram,"handle, 90d Reach Rate, 90d Meaningful Engagement Rate","handle empty or invalid | The Pulse: implausible value (vendor_c) | The Hub: missing comments_90d, saves_90d (vendor_c)"
+CR00422,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_c); imprecise (rounded counts) (vendor_b)
+CR00424,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count, views_90d (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing shares_90d (vendor_b)"
+CR00428,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c, vendor_c)"
+CR00430,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00430,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR00432,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00438,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_b)
+CR00441,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_a); imprecise (rounded counts) (vendor_b)
+CR00442,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00443,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00443,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)
+CR00444,channel,instagram,"handle, 90d Reach Rate, 90d Growth Rate",handle empty or invalid | The Pulse: missing views_90d (vendor_b) | The Lens: imprecise (rounded counts) (vendor_b)
+CR00445,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00446,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00448,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count (vendor_c)
+CR00449,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00449,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00451,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00458,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00461,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00473,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c); missing saves_90d (vendor_b)"
+CR00476,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00477,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00477,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00477,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_c)
+CR00483,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_a); missing saves_90d (vendor_b)
+CR00485,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00487,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00488,channel,tiktok,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: missing net_new_followers_90d (vendor_b) | The Hub: missing comments_90d (vendor_b)
+CR00489,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c, vendor_b)"
+CR00491,channel,instagram,"handle, 90d Reach Rate, 90d Growth Rate",handle empty or invalid | The Pulse: missing views_90d (vendor_b) | The Lens: imprecise (rounded counts) (vendor_b)
+CR00494,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00495,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00495,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00501,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00502,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing likes_90d (vendor_b)
+CR00504,channel,instagram,handle,handle empty or invalid
+CR00505,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00508,channel,instagram,handle,handle empty or invalid
+CR00508,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00509,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00510,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_a); missing shares_90d (vendor_b)
+CR00510,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00517,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00517,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing saves_90d (vendor_c)
+CR00519,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_c)
+CR00525,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00525,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c)"
+CR00526,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00527,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR00528,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00538,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00538,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_a)
+CR00540,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00541,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, likes_90d, saves_90d (vendor_c)"
+CR00542,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00542,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00542,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00550,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00555,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, likes_90d (vendor_b)"
+CR00557,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00571,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00574,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00574,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR00576,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00577,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00584,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00587,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00589,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00591,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00593,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00594,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00599,channel,instagram,"90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_c) | The Lens: missing net_new_followers_90d (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR00599,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00601,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00601,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_c)
+CR00602,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing saves_90d (vendor_c)
+CR00605,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00613,channel,tiktok,90d Growth Rate,"The Lens: missing net_new_followers_90d (vendor_c); missing follower_count, net_new_followers_90d (vendor_b)"
+CR00613,channel,youtube,handle,handle empty or invalid
+CR00615,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00615,channel,tiktok,"90d Reach Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR00616,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00621,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00622,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00625,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_a, vendor_b)"
+CR00625,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00628,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00631,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00636,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00638,channel,tiktok,90d Reach Rate,Excluded at review: CROSS_VENDOR_DISCREPANCY (Q00028)
+CR00655,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00655,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_a)
+CR00657,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00661,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00669,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)
+CR00670,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00674,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00681,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00684,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing comments_90d (vendor_a); missing likes_90d (vendor_b)
+CR00686,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00687,channel,tiktok,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: imprecise (rounded counts) (vendor_b) | The Hub: missing shares_90d (vendor_b)
+CR00688,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00689,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00689,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00691,channel,instagram,"90d Reach Rate, 90d Growth Rate",The Pulse: missing views_90d (vendor_b) | The Lens: missing net_new_followers_90d (vendor_b)
+CR00692,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR00694,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c)"
+CR00696,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00696,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00701,channel,instagram,"90d Reach Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR00702,channel,youtube,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00707,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00722,channel,instagram,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing comments_90d (vendor_b)
+CR00724,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00725,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d (vendor_c); missing saves_90d (vendor_a)"
+CR00725,channel,tiktok,"90d Reach Rate, 90d Growth Rate",The Pulse: missing views_90d (vendor_b) | The Lens: imprecise (rounded counts) (vendor_b)
+CR00726,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00727,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00727,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00728,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing likes_90d (vendor_b)"
+CR00728,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00730,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00733,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, shares_90d (vendor_b)"
+CR00739,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00746,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00747,channel,youtube,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, shares_90d (vendor_c)"
+CR00748,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00750,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00752,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00752,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00753,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00753,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_a)
+CR00755,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00760,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_a)
+CR00761,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c)"
+CR00764,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c); missing shares_90d (vendor_b)"
+CR00769,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00770,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_a, vendor_c)"
+CR00771,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00772,channel,tiktok,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: missing net_new_followers_90d (vendor_b) | The Hub: missing comments_90d (vendor_b)
+CR00781,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00781,channel,tiktok,handle,handle empty or invalid
+CR00786,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count (vendor_c); missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_b)"
+CR00788,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d, shares_90d (vendor_c)"
+CR00788,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00795,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00796,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a)
+CR00799,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR00799,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00805,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00810,channel,tiktok,"90d Reach Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR00811,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c); missing saves_90d (vendor_b)"
+CR00812,channel,youtube,handle,handle empty or invalid
+CR00817,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d (vendor_c)"
+CR00819,channel,instagram,90d Growth Rate,"The Lens: missing net_new_followers_90d (vendor_c); missing follower_count, net_new_followers_90d (vendor_b)"
+CR00822,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00823,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00826,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR00828,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00830,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00831,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_a)
+CR00832,channel,tiktok,90d Growth Rate,The Lens: missing follower_count (vendor_c); imprecise (rounded counts) (vendor_b)
+CR00835,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00839,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_a, vendor_b, vendor_c)"
+CR00839,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00843,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00858,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00858,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing likes_90d (vendor_b)"
+CR00864,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00865,channel,youtube,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_a)
+CR00872,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d (vendor_b, vendor_b)"
+CR00873,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00874,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00874,channel,tiktok,"handle, 90d Meaningful Engagement Rate","handle empty or invalid | The Hub: missing comments_90d, likes_90d, saves_90d, shares_90d (vendor_c)"
+CR00875,channel,instagram,"handle, 90d Meaningful Engagement Rate","handle empty or invalid | The Hub: missing comments_90d (vendor_b, vendor_b)"
+CR00875,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00876,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing saves_90d (vendor_b)
+CR00878,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR00881,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_a)
+CR00883,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00887,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00889,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c); missing saves_90d (vendor_b)"
+CR00892,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d, shares_90d (vendor_c)"
+CR00892,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR00895,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)
+CR00899,channel,instagram,90d Growth Rate,"The Lens: missing net_new_followers_90d (vendor_a); missing follower_count, net_new_followers_90d (vendor_b)"
+CR00899,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00901,channel,youtube,handle,handle empty or invalid
+CR00902,channel,youtube,90d Reach Rate,Excluded at review:  (computed)
+CR00907,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR00909,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a); missing likes_90d (vendor_b)
+CR00915,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00916,channel,instagram,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: imprecise (rounded counts) (vendor_b) | The Hub: missing comments_90d (vendor_b)
+CR00923,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00924,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00924,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c); missing comments_90d, shares_90d (vendor_b)"
+CR00926,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00927,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR00931,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a); missing likes_90d (vendor_b)
+CR00934,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count (vendor_c); missing follower_count, net_new_followers_90d (vendor_b)"
+CR00935,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR00937,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00942,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00943,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00949,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00952,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR00953,channel,tiktok,90d Growth Rate,The Lens: missing follower_count (vendor_c); missing net_new_followers_90d (vendor_b)
+CR00969,channel,youtube,90d Meaningful Engagement Rate,"The Hub: missing shares_90d (vendor_c, vendor_a)"
+CR00975,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_a)
+CR00976,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d, shares_90d (vendor_c); missing comments_90d (vendor_b)"
+CR00978,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR00983,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR00986,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR00986,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a)
+CR00991,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_b)
+CR00991,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR00992,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR00998,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_a)
+CR00998,channel,tiktok,"90d Reach Rate, 90d Growth Rate",The Pulse: missing views_90d (vendor_b) | The Lens: imprecise (rounded counts) (vendor_b)
+CR01000,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c); missing saves_90d (vendor_b)"
+CR01001,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR01001,channel,tiktok,90d Reach Rate,The Pulse: missing follower_count (vendor_c); missing views_90d (vendor_b)
+CR01001,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01003,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01003,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01005,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01006,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01008,channel,tiktok,90d Growth Rate,"The Lens: missing net_new_followers_90d (vendor_c, vendor_b)"
+CR01009,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01009,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01023,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01025,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01029,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c); missing shares_90d (vendor_a); missing comments_90d (vendor_b)"
+CR01034,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c, vendor_c)"
+CR01037,channel,tiktok,"90d Reach Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_b) | The Hub: missing shares_90d (vendor_b)
+CR01039,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01045,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01045,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01045,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01046,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01047,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01049,channel,instagram,90d Reach Rate,"The Pulse: missing views_90d (vendor_c, vendor_b)"
+CR01051,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing saves_90d (vendor_b)
+CR01054,channel,youtube,90d Meaningful Engagement Rate,"The Hub: missing likes_90d (vendor_c, vendor_c)"
+CR01056,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01059,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01059,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01060,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR01061,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR01071,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_a)
+CR01073,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_b)
+CR01073,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR01077,channel,tiktok,handle,handle empty or invalid
+CR01077,channel,youtube,"90d Growth Rate, 90d Meaningful Engagement Rate",The Lens: missing net_new_followers_90d (vendor_c) | The Hub: missing likes_90d (vendor_c)
+CR01078,channel,tiktok,"90d Reach Rate, 90d Growth Rate",The Pulse: missing views_90d (vendor_b) | The Lens: imprecise (rounded counts) (vendor_b)
+CR01081,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count (vendor_c); missing follower_count, net_new_followers_90d (vendor_b)"
+CR01081,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01088,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01091,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01092,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR01093,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01102,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01111,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01119,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01121,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01127,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01127,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing net_new_followers_90d (vendor_c); missing follower_count (vendor_a)
+CR01130,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01134,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR01136,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01138,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01138,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01143,channel,instagram,"90d Reach Rate, 90d Growth Rate",The Pulse: missing views_90d (vendor_b) | The Lens: imprecise (rounded counts) (vendor_b)
+CR01145,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01146,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01148,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_b)
+CR01149,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01151,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_a)
+CR01151,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01152,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR01160,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c) | The Lens: missing follower_count (vendor_c) | The Hub: missing comments_90d, likes_90d, saves_90d (vendor_c)"
+CR01160,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b) | The Hub: missing shares_90d (vendor_b)"
+CR01160,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)
+CR01172,channel,instagram,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_c); imprecise (rounded counts) (vendor_b)
+CR01178,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing saves_90d (vendor_b)
+CR01179,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01179,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01184,channel,tiktok,handle,handle empty or invalid
+CR01187,channel,instagram,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_a)
+CR01191,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR01191,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01194,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01194,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01200,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d, shares_90d (vendor_c); missing likes_90d (vendor_b)"
+CR01200,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_c); missing shares_90d (vendor_a)
+CR01205,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing comments_90d (vendor_b)
+CR01207,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count (vendor_c); missing follower_count, net_new_followers_90d (vendor_b)"
+CR01208,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_a)
+CR01213,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01215,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01217,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_b)
+CR01218,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01218,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_a); missing shares_90d (vendor_b)
+CR01219,channel,tiktok,handle,handle empty or invalid
+CR01219,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR01220,channel,instagram,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR01220,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01222,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c, vendor_b)"
+CR01228,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01229,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR01229,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01230,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01232,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01232,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01233,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR01233,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_a)
+CR01235,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_b)
+CR01235,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR01240,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01248,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR01270,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01283,channel,youtube,90d Meaningful Engagement Rate,"The Hub: missing likes_90d (vendor_c, vendor_a)"
+CR01284,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR01290,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_c)
+CR01292,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_c, vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_c, vendor_b)"
+CR01295,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d (vendor_c); missing comments_90d (vendor_b)"
+CR01296,channel,tiktok,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01296,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)
+CR01298,channel,youtube,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01302,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01303,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_a)
+CR01303,channel,tiktok,90d Growth Rate,"The Lens: missing net_new_followers_90d (vendor_c, vendor_b)"
+CR01316,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01323,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01324,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01329,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01334,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01337,channel,youtube,90d Reach Rate,The Pulse: missing views_90d (vendor_a)
+CR01342,channel,tiktok,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01342,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01345,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01347,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c); missing comments_90d, likes_90d, saves_90d (vendor_b)"
+CR01352,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing comments_90d (vendor_b)
+CR01356,channel,instagram,"follower_count, 90d Reach Rate, 90d Growth Rate","follower_count empty or invalid | The Pulse: missing follower_count (vendor_b) | The Lens: missing follower_count, net_new_followers_90d (vendor_b)"
+CR01356,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01362,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_b)
+CR01364,channel,tiktok,"90d Reach Rate, 90d Meaningful Engagement Rate",The Pulse: missing views_90d (vendor_c) | The Hub: missing saves_90d (vendor_c)
+CR01365,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01371,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01381,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01383,channel,instagram,90d Growth Rate,The Lens: missing follower_count (vendor_c); missing net_new_followers_90d (vendor_b)
+CR01384,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, likes_90d, saves_90d (vendor_c); missing likes_90d (vendor_b)"
+CR01388,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_c); missing shares_90d (vendor_a)
+CR01393,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_b)
+CR01393,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01395,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_b)
+CR01396,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_c)
+CR01397,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing comments_90d, saves_90d (vendor_c); missing likes_90d (vendor_b)"
+CR01398,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing likes_90d (vendor_b)
+CR01402,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01412,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01415,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01415,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR01419,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01421,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01429,channel,instagram,handle,handle empty or invalid
+CR01429,channel,tiktok,90d Growth Rate,The Lens: missing net_new_followers_90d (vendor_b)
+CR01432,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01437,channel,tiktok,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR01442,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","Only stale data (vendor_b, vendor_c)"
+CR01447,channel,instagram,90d Reach Rate,The Pulse: missing views_90d (vendor_b)
+CR01458,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c); missing shares_90d (vendor_b)
+CR01461,channel,instagram,"90d Growth Rate, 90d Meaningful Engagement Rate","The Lens: missing net_new_followers_90d (vendor_c); imprecise (rounded counts) (vendor_b) | The Hub: missing saves_90d, shares_90d (vendor_c); missing shares_90d (vendor_b)"
+CR01461,channel,youtube,handle,handle empty or invalid
+CR01462,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_c)
+CR01462,channel,tiktok,"90d Growth Rate, 90d Meaningful Engagement Rate","The Lens: missing net_new_followers_90d (vendor_c) | The Hub: missing saves_90d, shares_90d (vendor_c)"
+CR01463,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR01463,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01469,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR01470,channel,tiktok,90d Meaningful Engagement Rate,"The Hub: missing saves_90d (vendor_c, vendor_b)"
+CR01470,channel,youtube,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_a)
+CR01474,channel,instagram,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",Only stale data (vendor_b)
+CR01474,channel,tiktok,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_a)
+CR01474,channel,youtube,90d Meaningful Engagement Rate,The Hub: missing shares_90d (vendor_a)
+CR01475,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing saves_90d (vendor_c)
+CR01475,channel,tiktok,"handle, 90d Meaningful Engagement Rate",handle empty or invalid | The Hub: missing saves_90d (vendor_c)
+CR01477,channel,instagram,90d Meaningful Engagement Rate,"The Hub: missing likes_90d, saves_90d (vendor_c)"
+CR01478,channel,instagram,90d Growth Rate,The Lens: imprecise (rounded counts) (vendor_b)
+CR01479,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate",No vendor has this channel
+CR01483,channel,instagram,90d Meaningful Engagement Rate,The Hub: missing likes_90d (vendor_b)
+CR01484,channel,tiktok,"handle, follower_count, 90d Reach Rate, 90d Growth Rate, 90d Meaningful Engagement Rate","handle, follower_count empty or invalid | The Pulse: not computable | The Lens: missing net_new_followers_90d (vendor_b) | The Hub: not computable"
+CR01495,channel,youtube,"follower_count, 90d Reach Rate, 90d Growth Rate",follower_count empty or invalid | The Pulse: missing follower_count (vendor_a) | The Lens: missing follower_count (vendor_a)

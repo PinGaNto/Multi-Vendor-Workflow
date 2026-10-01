@@ -1,0 +1,220 @@
+# ---------------------------------------------------------------
+# Vendor QA + tiered waterfall fill — configuration
+# Everything business-specific lives here; the code is generic.
+# ---------------------------------------------------------------
+
+# Runs are monthly. Each month's drop (request list + vendor files, any file names) goes in data/inbox/YYYY-MM/.
+# Freshness is measured at the end of that month. What the pipeline learns is kept in memory_dir.
+memory_dir: memory
+key: creator_id
+
+# Channels we track (the three the Pulse / Lens / Hub framework covers). Add more here if needed.
+platforms: [instagram, tiktok, youtube]
+platform_aliases:
+  ig: instagram
+  insta: instagram
+  tt: tiktok
+  yt: youtube
+
+# Uploaded every month: which creators, and which of their channels, we need. Recognised automatically
+# (a creator_id column plus a column per platform, or creator_id + platform). See creator_request_template.xlsx.
+request:
+  sheet: Request
+
+# Descriptive fields we fill (field by field, from the highest tier that has a valid value).
+fields:
+  creator:
+    display_name:  {required: true,  rule: non_empty}
+    country:       {required: true,  rule: iso2}
+    contact_email: {required: false, rule: email}
+    category:      {required: false, rule: non_empty}
+  channel:
+    handle:         {required: true,  rule: non_empty}
+    follower_count: {required: true,  rule: non_negative_int}
+
+# Raw 90-day stats vendors send per channel. They feed the metrics below and are never mixed across
+# vendors: each metric is computed inside one vendor record, then the metric is filled tier by tier.
+metric_inputs:
+  net_new_followers_90d: {rule: int}          # can be negative
+  views_90d:     {rule: non_negative_int}
+  likes_90d:     {rule: non_negative_int}     # the text "hidden" marks hidden like counts
+  comments_90d:  {rule: non_negative_int}
+  shares_90d:    {rule: non_negative_int}
+  saves_90d:     {rule: non_negative_int}
+
+# The three metrics (pillars). `formula` uses the fields above. `bounds` = plausible range; values outside
+# are treated as bad data. `by_platform` overrides the formula where a platform doesn't publish an input.
+metrics:
+  reach_rate:
+    pillar: The Pulse
+    theme: Attention
+    label: 90d Reach Rate
+    blurb: Creators who drive awareness and visibility
+    formula: views_90d / follower_count
+    display: multiple            # 2.4x
+    bounds: [0, 100]
+    required: true
+  growth_rate:
+    pillar: The Lens
+    theme: Affiliation
+    label: 90d Growth Rate
+    blurb: Creators who establish credibility and in-the-know appeal
+    formula: net_new_followers_90d / (follower_count - net_new_followers_90d)
+    display: percent_signed      # +12.3%
+    bounds: [-0.9, 20]
+    compare_within_size_band: true   # small accounts grow faster; compare like with like
+    required: true
+  meaningful_eng_rate:
+    pillar: The Hub
+    theme: Action
+    label: 90d Meaningful Engagement Rate
+    blurb: Creators who influence community participation and behavior
+    formula: (comments_90d + shares_90d + saves_90d) / (likes_90d + comments_90d + shares_90d + saves_90d)
+    by_platform:
+      youtube: (comments_90d + shares_90d) / (likes_90d + comments_90d + shares_90d)   # YouTube doesn't publish saves
+    display: percent
+    bounds: [0, 1]
+    needs_visible_likes: true    # hidden likes would inflate the rate, so it isn't computed
+    required: true
+
+# Follower-size bands (lower bounds) used when a metric compares within size band
+size_bands:
+  nano: 0
+  micro: 10000
+  mid: 100000
+  macro: 1000000
+min_peers_for_band: 8            # fewer peers in a platform+band -> compare within the platform instead
+
+# Vendor files: one row per creator per channel. File names don't matter: each file is matched to a vendor by
+# its columns, platform spellings and past file names. column_map is the starting point; renamed columns are
+# learned automatically and remembered in memory/vendor_registry.json.
+vendors:
+  vendor_a:
+    last_updated_col: updated_at
+    column_map:            # vendor column -> our field
+      cid: creator_id
+      platform: platform
+      account: handle
+      followers: follower_count
+      net_new_90d: net_new_followers_90d
+      views_90d: views_90d
+      likes_90d: likes_90d
+      comments_90d: comments_90d
+      shares_90d: shares_90d
+      saves_90d: saves_90d
+      name: display_name
+      country_code: country
+      email: contact_email
+      niche: category
+  vendor_b:
+    last_updated_col: refreshed
+    column_map:
+      creator_ref: creator_id
+      channel: platform
+      username: handle
+      audience_k: follower_count          # thousands -> transform
+      audience_90d_ago_k: followers_prev  # thousands; net new is derived below
+      plays_90d: views_90d
+      hearts: likes_90d
+      comment_count: comments_90d
+      share_count: shares_90d
+      bookmarks: saves_90d
+      full_name: display_name
+      country_name: country               # full names -> transform
+      contact: contact_email
+      vertical: category
+    derive:
+      net_new_followers_90d: follower_count - followers_prev
+    precision:                            # counts are rounded to the nearest 10 (0.01K)
+      follower_count: 10
+      followers_prev: 10
+  vendor_c:
+    last_updated_col: as_of
+    column_map:                           # no saves column from this vendor
+      id: creator_id
+      network: platform
+      handle_name: handle
+      subs: follower_count
+      growth_90d: net_new_followers_90d
+      views: views_90d
+      likes: likes_90d
+      comments: comments_90d
+      shares: shares_90d
+      creator: display_name
+      geo: country
+      mail: contact_email
+      genre: category
+
+# Per-vendor format fixes, applied after column mapping (before `derive`)
+transforms:
+  vendor_b:
+    follower_count: {multiply: 1000}
+    followers_prev: {multiply: 1000}
+    country: country_name_to_iso2
+  vendor_c:
+    country: uppercase
+
+qa:
+  freshness_sla_days: 90         # a record older than this is stale
+  weights:                       # composite quality score (sums to 1); measured ONLY on requested channels
+    usable_coverage: 0.25        # share of requested creator+channel pairs with a FRESH vendor row
+    completeness: 0.25           # share of required fields AND required metrics the vendor can supply
+    freshness: 0.20              # share of those rows within the SLA
+    validity: 0.15               # share of supplied values passing rules and plausibility bounds
+    consistency: 0.15            # share of its values that agree with the other vendors (within the discrepancy thresholds)
+  min_score_to_use: 0.40         # vendors below this are excluded
+  history_weight: 0.15           # share of the vendor score that comes from its rolling reliability
+  reliability:                   # Vendor Reliability = rolling window of past months
+    window_months: 3             #   rolling 3-month window
+    qa_score_weight: 0.7         #   average monthly QA score in the window
+    review_accuracy_weight: 0.3  #   share of reviewed disputes where the reviewer kept this vendor's value/account
+  max_rounding_error: 0.05       # reject a metric when vendor rounding could move it by more than 5%
+
+waterfall:
+  required_field_target: 0.95    # stop when every required field and metric is >= 95% filled
+  allow_stale_values: false      # never fill from stale records
+  min_expected_gain: 0.005       # skip a tier if it would fill < 0.5% of open cells
+
+# ---------------------------------------------------------------
+# QA flags and human review
+#   GREEN  = pass, processed automatically
+#   YELLOW = warning, recorded in the QA report, processed automatically
+#   RED    = blocked: only the affected creator-channel / metric is held back for human review
+# ---------------------------------------------------------------
+qa_rules:
+  severity:                         # reason code -> GREEN / YELLOW / RED (change here to tighten or relax a rule)
+    IDENTITY_MATCH_UNCERTAIN: RED   # vendors disagree on who the account is, and there's no majority
+    IDENTITY_CONFLICT_RESOLVED: YELLOW   # 2+ vendors agree on the account; the odd one out was dropped
+    CROSS_VENDOR_DISCREPANCY: RED   # vendors' values differ beyond the threshold, no credible majority
+    OUTLIER_SOURCE_EXCLUDED: YELLOW # 2+ vendors agree; one outlier (even Tier 1) was not used
+    PRIMARY_SOURCE_MISSING: YELLOW  # Tier 1 couldn't supply the field; a lower tier filled it
+    HISTORICAL_ANOMALY: YELLOW      # unusually large change vs last month (could be genuine, e.g. viral)
+
+  identity:
+    match_on: [handle]              # strong identifiers compared across vendors (profile URLs are reduced to the handle);
+                                    # display names are never used to match
+    majority_resolves: true         # 2 of 3 vendors agree -> trust them and drop the odd one out (YELLOW)
+
+  discrepancy:                      # compared across vendors for the same creator-channel (fresh, valid values only)
+    majority_resolves: true         # 2 of 3 agree within threshold -> use the agreeing value even if Tier 1 is the outlier
+    block_dependents: true          # a disputed follower count also holds back the metrics computed from it
+    fields:                         # relative = |a-b| / larger value ; absolute = |a-b|
+      follower_count:      {mode: relative, threshold: 0.25}
+      reach_rate:          {mode: relative, threshold: 0.30}
+      growth_rate:         {mode: absolute, threshold: 0.05}     # 5 percentage points
+      meaningful_eng_rate: {mode: relative, threshold: 0.30}
+
+  fallback:
+    warn_fields: [handle, follower_count, reach_rate, growth_rate, meaningful_eng_rate]
+
+  history:                          # vs the creator's previous month (needs history in memory/)
+    fields:
+      follower_count: {max_increase: 2.0, max_decrease: 0.5}    # more than +200% or -50% month over month
+      reach_rate:     {max_increase: 4.0, max_decrease: 0.75}
+
+review:
+  leaderboard_gate: strict          # strict = no leaderboard while any RED item is unresolved
+                                    # exclude_unresolved = leave unresolved RED items out and build the leaderboard
+  decisions:                        # what a reviewer may choose, per reason code
+    IDENTITY_MATCH_UNCERTAIN: [CONFIRM_MATCH, REJECT_MATCH, SELECT_VENDOR_A, SELECT_VENDOR_B, SELECT_VENDOR_C, EXCLUDE]
+    CROSS_VENDOR_DISCREPANCY: [SELECT_VENDOR_A, SELECT_VENDOR_B, SELECT_VENDOR_C, MANUAL_VALUE, EXCLUDE]

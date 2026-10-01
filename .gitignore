@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+output/**/state.pkl
+demo_workspace/
+.DS_Store
