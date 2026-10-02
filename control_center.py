@@ -74,7 +74,25 @@ details.cc-more summary{cursor:pointer;font-size:13px;font-weight:600;color:var(
 @media (max-width:640px){.cc-scen div{grid-template-columns:minmax(0,1fr)}}
 .cc-dl{display:flex;flex-wrap:wrap;gap:6px}
 .cc-done{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.cc[data-folded="1"] .cc-steps,.cc[data-folded="1"] .cc-body{display:none}
+.cc-arow td{padding:0 9px 10px!important;border-top:0}
+tr[data-f] td{border-bottom:0}
+.cc-agent{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--ink);border-radius:8px;padding:8px 10px;font-size:13px}
+.cc-agent-tag{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.cc-sugg{flex:1 1 100%;display:grid;gap:4px}
+.cc-ev{margin:2px 0;padding-left:18px;color:var(--muted);font-size:12px;flex:1 1 100%}
+.cc-think{color:var(--accent-ink);font-weight:600}
+.cc-conf{font:600 11px var(--mono);padding:2px 7px;border-radius:999px;text-transform:uppercase}
+.cc-conf.high{background:var(--ink);color:var(--bg)} .cc-conf.medium{background:var(--md-bg);color:var(--md)} .cc-conf.low{background:var(--lo-bg);color:var(--lo)}
+.cc[data-folded="1"] .cc-steps,.cc-arow td{padding:0 9px 10px!important;border-top:0}
+tr[data-f] td{border-bottom:0}
+.cc-agent{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--ink);border-radius:8px;padding:8px 10px;font-size:13px}
+.cc-agent-tag{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.cc-sugg{flex:1 1 100%;display:grid;gap:4px}
+.cc-ev{margin:2px 0;padding-left:18px;color:var(--muted);font-size:12px;flex:1 1 100%}
+.cc-think{color:var(--accent-ink);font-weight:600}
+.cc-conf{font:600 11px var(--mono);padding:2px 7px;border-radius:999px;text-transform:uppercase}
+.cc-conf.high{background:var(--ink);color:var(--bg)} .cc-conf.medium{background:var(--md-bg);color:var(--md)} .cc-conf.low{background:var(--lo-bg);color:var(--lo)}
+.cc[data-folded="1"] .cc-body{display:none}
 </style>
 """
 
@@ -237,30 +255,82 @@ UI_JS = r"""
     for (const rows of Object.values(R.vendorRows)) { const r = rows.find(x => x[R.key] === c && x.display_name); if (r) return r.display_name; } return c; };
   const showVal = (field, v) => typeof v === "number" ? (field === "follower_count" ? fmt(Math.round(v)) : v.toFixed(3)) : "@" + v;
 
-  // ---------- human review ----------
+  // ---------- human review (with the review agent) ----------
   const DLABEL = {CONFIRM_MATCH: "Confirm match", REJECT_MATCH: "Reject match", MANUAL_VALUE: "Enter manual value", EXCLUDE: "Exclude"};
+  const TOOLNAME = {get_vendor_records: "reading each vendor's record", get_history: "checking past months", check_record_consistency: "testing a record's consistency",
+    find_handle_elsewhere: "searching for the handle in other files", get_creator_profile: "comparing the creator's other handles", get_vendor_track_record: "looking up a vendor's track record"};
+  S.sugg = {}; S.agentCtl = null;
+  if (window.claude && claude.use) claude.use("sample").then(async smp => {
+    if (!smp) return; try { const lim = await smp.limits(); if (!lim.tools) return; } catch { return; }
+    S.sample = smp; if (S.run) drawReview();
+  }).catch(() => {});
+  const decLabel = (f, d) => d.startsWith("SELECT_") ? `Use ${VN("vendor_" + d.slice(-1).toLowerCase())}` : DLABEL[d] || d;
+  function agentCell(f) {
+    const g = S.sugg[f.id];
+    const ev = `<button class="btn tertiary small" type="button" data-ev="${f.id}">${g && g.showEv ? "Hide evidence" : "Show evidence"}</button>`;
+    const evBox = g && g.showEv ? `<ul class="cc-ev">${INV.evidenceLines(S.run, f, INV.evidence(S.run, f)).map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+    let body;
+    if (g && g.busy) body = `<span class="cc-think">Agent investigating… ${esc(g.step || "")}</span> <button class="btn tertiary small" type="button" data-stop="1">Stop</button>`;
+    else if (g && g.ans) { const a = g.ans;
+      body = `<div class="cc-sugg"><div><span class="cc-conf ${a.confidence}">${esc(a.confidence)} confidence</span> <b>Suggests: ${esc(decLabel(f, a.decision))}${a.manual_value != null ? " " + esc(showVal(f.field, a.manual_value)) : ""}</b></div>
+        <div>${esc(a.summary)}</div>${(a.evidence || []).length ? `<ul class="cc-ev">${a.evidence.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+        <div class="cc-row"><button class="btn secondary small" type="button" data-use="${f.id}">Use suggestion</button><span class="id">${a.steps.length} tool call${a.steps.length === 1 ? "" : "s"}: ${[...new Set(a.steps.map(x => x.tool))].join(", ")}</span></div></div>`; }
+    else if (g && g.err) body = `<span class="note" style="margin:0">${esc(g.err)}</span>`;
+    else body = S.sample ? `<button class="btn secondary small" type="button" data-inv="${f.id}">Investigate with agent</button>` : `<span class="note" style="margin:0">Agent suggestions are available when this page is opened in Claude.</span>`;
+    return `<div class="cc-agent"><span class="cc-agent-tag">Review agent</span>${body} ${ev}${evBox}</div>`;
+  }
+  function refreshAgent(id) { const f = S.run.flags.find(x => x.id === id), td = el("cc-review").querySelector(`tr[data-a="${id}"] td`); if (td && f) td.innerHTML = agentCell(f); }
+  async function runAgent(id) {
+    const f = S.run.flags.find(x => x.id === id); if (!f || !S.sample) return;
+    const ctl = S.agentCtl = S.agentCtl || new AbortController();
+    S.sugg[id] = {...(S.sugg[id] || {}), busy: true, step: "", ans: null, err: null}; refreshAgent(id);
+    try {
+      const ans = await INV.investigate(S.sample, S.run, f, {signal: ctl.signal, onStep: t => { S.sugg[id].step = TOOLNAME[t] || t; refreshAgent(id); }});
+      S.sugg[id] = {...S.sugg[id], busy: false, ans};
+    } catch (e) {
+      const c = e && e.code;
+      if (["not_granted", "sampling_disabled", "capability_disabled", "capability_removed", "not_declared", "tools_unavailable"].includes(c)) { S.sample = null; S.sugg[id] = {...S.sugg[id], busy: false}; drawReview(); return; }
+      S.sugg[id] = {...S.sugg[id], busy: false, err: c === "cancelled" ? "Stopped." : c === "rate_limited" ? "Claude is busy; try again in a moment." : c === "bad_answer" ? e.message : "The agent couldn't finish this one."};
+    }
+    refreshAgent(id);
+  }
   function drawReview() {
     const R = S.run, open = ENG.openRed(R), done = R.flags.filter(f => f.severity === "RED" && f.status === "resolved");
     if (!open.length && !done.length) { el("cc-review").hidden = true; return; }
+    const keep = Object.fromEntries([...el("cc-review").querySelectorAll("tr[data-f]")].map(tr => [tr.dataset.f, [tr.querySelector("select").value, tr.querySelector("input").value]]));
     el("cc-review").hidden = false;
     el("cc-review").innerHTML = `<h3>3 · Human review <small>${open.length ? `${open.length} blocked item(s). Only these records are held back; nothing else waits on them.` : "All blocked items reviewed."}</small></h3>
+      ${open.length && S.sample ? `<div class="cc-row" style="margin-bottom:8px"><button class="btn secondary small" id="cc-inv-all" type="button">Investigate all with agent</button><span class="note" style="margin:0">The agent gathers evidence with its tools and suggests a decision for each item. You still decide: a suggestion only fills in the Decision when you press "Use suggestion".</span></div>` : ""}
       ${open.length ? `<div class="tablebox"><table class="cc-table"><thead><tr><th>ID</th><th>Creator · channel</th><th>Issue</th><th>Vendor values</th><th>Decision</th></tr></thead><tbody>
       ${open.map(f => `<tr data-f="${f.id}"><td class="cc-vals">${f.id}</td><td><b>${esc(name(f.creator_id))}</b><span class="id">${esc(f.creator_id)} · ${PN[f.platform]}</span></td>
         <td><span class="sev RED">${f.code === "IDENTITY_MATCH_UNCERTAIN" ? "Identity" : "Discrepancy"}</span> <span class="cc-vals">${esc(f.field)}</span><div class="expl">${esc(f.explanation)}</div></td>
         <td class="cc-vals">${Object.entries(f.values).map(([v, x]) => `${VN(v)}: ${esc(showVal(f.field, x))}`).join("<br>")}</td>
         <td><select aria-label="Decision for ${f.id}"><option value="">Choose…</option>${(CC.config.review.decisions[f.code] || []).filter(d => !d.startsWith("SELECT_") || ("vendor_" + d.slice(-1).toLowerCase()) in f.values)
           .map(d => `<option value="${d}">${d.startsWith("SELECT_") ? `Use ${VN("vendor_" + d.slice(-1).toLowerCase())} (${esc(showVal(f.field, f.values["vendor_" + d.slice(-1).toLowerCase()]))})` : DLABEL[d]}</option>`).join("")}</select>
-          <input type="number" step="any" placeholder="value" aria-label="Manual value for ${f.id}" hidden></td></tr>`).join("")}
+          <input type="number" step="any" placeholder="value" aria-label="Manual value for ${f.id}" hidden></td></tr>
+        <tr class="cc-arow" data-a="${f.id}"><td colspan="5">${agentCell(f)}</td></tr>`).join("")}
       </tbody></table></div>
       <div class="cc-row" style="margin-top:10px"><label class="cc-month" style="flex-direction:row;align-items:center;gap:6px">Reviewer <input id="cc-reviewer" placeholder="your name" style="width:150px"></label>
         <button class="btn primary small" id="cc-apply" type="button">Apply decisions</button><span class="note" style="margin:0">Partial reviews are fine; anything without a decision stays blocked.</span></div>` : ""}
-      ${done.length ? `<details class="cc-more"${open.length ? "" : " open"}><summary>Audit trail (${done.length})</summary><div class="tablebox"><table class="cc-table"><thead><tr><th>ID</th><th>Creator · channel</th><th>Decision</th><th>Final value · source</th><th>Reviewer</th></tr></thead><tbody>
-        ${done.map(f => `<tr><td class="cc-vals">${f.id}</td><td>${esc(name(f.creator_id))}<span class="id">${PN[f.platform]} · ${esc(f.code)}</span></td><td class="cc-vals">${f.decision}</td><td class="cc-vals">${f.final_value == null ? "–" : esc(showVal(f.field, f.final_value))} · ${esc(f.final_source)}</td><td>${esc(f.reviewer || "–")}<span class="id">${esc(f.reviewed_at)}</span></td></tr>`).join("")}
+      ${done.length ? `<details class="cc-more"${open.length ? "" : " open"}><summary>Audit trail (${done.length})</summary><div class="tablebox"><table class="cc-table"><thead><tr><th>ID</th><th>Creator · channel</th><th>Decision</th><th>Final value · source</th><th>Agent</th><th>Reviewer</th></tr></thead><tbody>
+        ${done.map(f => `<tr><td class="cc-vals">${f.id}</td><td>${esc(name(f.creator_id))}<span class="id">${PN[f.platform]} · ${esc(f.code)}</span></td><td class="cc-vals">${f.decision}</td><td class="cc-vals">${f.final_value == null ? "–" : esc(showVal(f.field, f.final_value))} · ${esc(f.final_source)}</td>
+          <td>${S.sugg[f.id] && S.sugg[f.id].ans ? `${esc(S.sugg[f.id].ans.decision)}<span class="id">${S.sugg[f.id].ans.decision === f.decision ? "followed" : "overridden"} · ${esc(S.sugg[f.id].ans.confidence)}</span>` : "–"}</td>
+          <td>${esc(f.reviewer || "–")}<span class="id">${esc(f.reviewed_at)}</span></td></tr>`).join("")}
       </tbody></table></div></details>` : ""}`;
-    el("cc-review").querySelectorAll("tr[data-f] select").forEach(s => s.addEventListener("change", () => { s.nextElementSibling.hidden = s.value !== "MANUAL_VALUE"; }));
+    const box = el("cc-review");
+    box.querySelectorAll("tr[data-f]").forEach(tr => { const k = keep[tr.dataset.f]; if (k) { tr.querySelector("select").value = k[0]; tr.querySelector("input").value = k[1]; tr.querySelector("input").hidden = k[0] !== "MANUAL_VALUE"; } });
+    box.querySelectorAll("tr[data-f] select").forEach(s => s.addEventListener("change", () => { s.nextElementSibling.hidden = s.value !== "MANUAL_VALUE"; }));
+    const all = el("cc-inv-all");
+    if (all) all.addEventListener("click", async () => {
+      all.disabled = true; S.agentCtl = new AbortController();
+      for (const f of ENG.openRed(S.run)) { if (S.agentCtl.signal.aborted || !S.sample) break; if (!(S.sugg[f.id] && S.sugg[f.id].ans)) await runAgent(f.id); }
+      S.agentCtl = null; if (el("cc-inv-all")) el("cc-inv-all").disabled = false;
+    });
     const ap = el("cc-apply");
     if (ap) ap.addEventListener("click", () => {
-      const decisions = [...el("cc-review").querySelectorAll("tr[data-f]")].map(tr => ({id: tr.dataset.f, decision: tr.querySelector("select").value, manual: tr.querySelector("input").value}));
+      const decisions = [...box.querySelectorAll("tr[data-f]")].map(tr => { const id = tr.dataset.f, g = S.sugg[id], d = tr.querySelector("select").value;
+        return {id, decision: d, manual: tr.querySelector("input").value,
+          note: g && g.ans ? `review agent suggested ${g.ans.decision} (${g.ans.confidence}); ${g.ans.decision === d ? "followed" : "overridden"}: ${g.ans.summary}` : ""}; });
       if (!decisions.some(d => d.decision)) { msg("Choose a decision for at least one blocked item.", true); return; }
       const problems = ENG.applyDecisions(S.run, decisions, el("cc-reviewer").value.trim());
       const left = ENG.openRed(S.run).length;
@@ -269,6 +339,15 @@ UI_JS = r"""
         (left ? `${left} item(s) still blocked.` : "All blocked items resolved; only the affected records were reprocessed. Finalize to build the leaderboard."), problems.length > 0);
     });
   }
+  el("cc-review").addEventListener("click", e => {
+    const t = e.target.closest("button"); if (!t) return;
+    if (t.dataset.inv) { S.agentCtl = new AbortController(); runAgent(t.dataset.inv).then(() => { S.agentCtl = null; }); }
+    else if (t.dataset.stop) { if (S.agentCtl) S.agentCtl.abort(); }
+    else if (t.dataset.ev) { const id = t.dataset.ev; S.sugg[id] = {...(S.sugg[id] || {}), showEv: !(S.sugg[id] && S.sugg[id].showEv)}; refreshAgent(id); }
+    else if (t.dataset.use) { const id = t.dataset.use, a = S.sugg[id].ans, tr = el("cc-review").querySelector(`tr[data-f="${id}"]`);
+      const sel = tr.querySelector("select"); sel.value = a.decision; const inp = tr.querySelector("input"); inp.hidden = a.decision !== "MANUAL_VALUE";
+      if (a.manual_value != null) inp.value = a.manual_value; sel.focus(); }
+  });
 
   // ---------- finalize + reports ----------
   function drawFinal() {
@@ -350,6 +429,6 @@ def cc_html() -> str:
 
 def cc_script(p) -> str:
     data = json.dumps(cc_payload(p), default=str, separators=(",", ":")).replace("</", "<\\/")
-    engine = (HERE / "web" / "engine.js").read_text(encoding="utf-8")
+    engine = "\n".join((HERE / "web" / f).read_text(encoding="utf-8") for f in ("engine.js", "investigate.js"))
     return (f'<script type="application/json" id="cc-data">{data}</script>\n'
             f"<script>\n{engine}\n</script>\n<script>\n{UI_JS}\n</script>")

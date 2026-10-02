@@ -34,6 +34,20 @@ The Control Center sits **at the top of the leaderboard page** (`creator_leaderb
 - **Reset Demo** clears inputs, QA results, review decisions and generated outputs (the demo workspace), ready to start again.
 - CLI equivalents: `python demo_data.py [--seed N]` and `python demo_data.py --reset`.
 
+## Review agent (human review step)
+Each blocked (RED) item has a **Review agent** panel. *Investigate with agent* (or *Investigate all*) hands the item to Claude together with six investigation tools that run on this month's data; Claude decides which to call and in what order, then replies with a decision from the allowed list, a confidence (high / medium / low), a one-line summary and the evidence it found. **Use suggestion** fills in the Decision; the reviewer still presses Apply, and the audit trail records whether the suggestion was followed or overridden.
+
+| Tool | What it returns |
+|---|---|
+| `get_vendor_records` | Each vendor's raw record for the creator-channel: handle, counts, record date / age / freshness, rounding, computed metrics |
+| `get_history` | Previous months' follower count, reach and scores, and the month-over-month change each vendor's value implies |
+| `check_record_consistency` | Whether a vendor's own numbers hang together (implied previous total and growth) and how reach and engagement per view compare with the platform median |
+| `find_handle_elsewhere` | Which creator IDs / platforms a handle appears under in any vendor file (a handle attached to another creator signals a mix-up) |
+| `get_creator_profile` | The creator's handles on every platform and vendor, display names, country |
+| `get_vendor_track_record` | A vendor's QA score parts, consistency with the other vendors, 3-month reliability and review accuracy (tie-breaker only) |
+
+The agent runs on the Claude-hosted page, on the viewer's own Claude account (the first use asks permission). Where Claude isn't available (e.g. the GitHub Pages copy), *Show evidence* still runs the same tools and lists what they found. The agent works only from the vendor files and stored history; it can't check the live platform. In the demo, the vendor that is wrong in a discrepancy alternates between Vendor A and B, so always siding with Tier 1 doesn't pass. Code: `web/investigate.js`.
+
 ## Vendor Reliability (rolling 3 months)
 `3-month reliability = 70% × average monthly QA score + 30% × review accuracy` (review accuracy = share of reviewed disputes involving the vendor where the reviewer kept its value or account; QA average alone if there were no disputes). Tiering uses **85% this month + 15% reliability**. Window and weights: `config.yaml → qa.reliability`, `qa.history_weight`. Shown on the Vendor QA tab of the workbook and the app's *Vendor reliability* tab.
 

@@ -804,8 +804,9 @@ const ENG = (() => {
     const note = (key, k, what) => (scen[key] = scen[key] || []).push({creator_id: k.split("|")[0], platform: k.split("|")[1], creator: truth.get(k).display_name, what});
     S.clean.forEach(k => note("1 Clean agreement · GREEN", k, "A, B and C all report this channel within ~2% of each other"));
     S.fallback.forEach(k => { A.get(k).likes_90d = null; note("2 Primary source missing · YELLOW", k, "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric"); });
-    S.discrepancy.forEach(k => { const m = rnd() < .5 ? U(.45, .62) : U(1.55, 1.9); B.get(k).follower_count = Math.round(A.get(k).follower_count * m);
-      note("3 Material discrepancy · RED", k, `A ${A.get(k).follower_count.toLocaleString("en-US")} vs B ${B.get(k).follower_count.toLocaleString("en-US")} followers; no third source`); });
+    S.discrepancy.forEach((k, i) => { const m = rnd() < .5 ? U(.45, .62) : U(1.55, 1.9), [bad, good] = i % 2 === 0 ? [B, A] : [A, B];   // the wrong vendor alternates
+      bad.get(k).follower_count = Math.round(good.get(k).follower_count * m);
+      note("3 Material discrepancy · RED", k, `A ${A.get(k).follower_count.toLocaleString("en-US")} vs B ${B.get(k).follower_count.toLocaleString("en-US")} followers; no third source; ${i % 2 === 0 ? "B" : "A"} is the wrong one`); });
     S.t1_outlier.forEach(k => { A.get(k).follower_count = Math.round(A.get(k).follower_count * U(.5, .6)); note("3b Tier 1 outlier overruled · YELLOW", k, "Vendor A (Tier 1) is the outlier; B and C agree, so their value is used"); });
     const others = [...truth.keys()].filter(k => !seeded.has(k));
     S.identity.forEach(k => { const o = truth.get(pick(others.filter(x => x.endsWith("|" + k.split("|")[1])))), r = C.get(k);

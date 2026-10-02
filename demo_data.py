@@ -212,10 +212,12 @@ def generate(month: str | None = None, seed: int | None = None, workspace: Path 
     for p in scen["fallback"]:                               # Tier 1 lacks likes → Hub metric comes from Tier 2
         A.at[p, "likes_90d"] = None
         note("2_primary_source_missing_YELLOW", p, "Vendor A (Tier 1) has no likes count; Vendor B fills the engagement metric")
-    for p in scen["discrepancy"]:                            # only A and B, follower counts far apart
-        k = rng.choice([rng.uniform(0.45, 0.62), rng.uniform(1.55, 1.9)])
-        B.at[p, "follower_count"] = int(A.at[p, "follower_count"] * k)
-        note("3_cross_vendor_discrepancy_RED", p, f"A {A.at[p, 'follower_count']:,} vs B {B.at[p, 'follower_count']:,} followers; no third source")
+    for i, p in enumerate(scen["discrepancy"]):              # only A and B, follower counts far apart; the wrong one alternates,
+        k = rng.choice([rng.uniform(0.45, 0.62), rng.uniform(1.55, 1.9)])   # so Tier 1 is not always right
+        bad, good = (B, A) if i % 2 == 0 else (A, B)
+        bad.at[p, "follower_count"] = int(good.at[p, "follower_count"] * k)
+        note("3_cross_vendor_discrepancy_RED", p, f"A {A.at[p, 'follower_count']:,} vs B {B.at[p, 'follower_count']:,} followers; no third source; "
+             f"{'B' if i % 2 == 0 else 'A'} is the wrong one")
     for p in scen["t1_outlier"]:                             # A disagrees with B and C, which agree
         A.at[p, "follower_count"] = int(A.at[p, "follower_count"] * rng.uniform(0.5, 0.6))
         note("3b_tier1_outlier_overruled_YELLOW", p, "Vendor A (Tier 1) is the outlier; B and C agree, so their value is used")
